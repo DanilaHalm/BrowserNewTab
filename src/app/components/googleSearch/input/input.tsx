@@ -5,4 +5,4 @@ const Input = styled.input`
 
 `
 
-return Input
+export default Input
