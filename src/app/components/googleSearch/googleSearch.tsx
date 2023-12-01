@@ -1,3 +1,4 @@
+"use client"
 import styled from "styled-components";
 import Form from "./form/form";
 import Input from "./input/input";
