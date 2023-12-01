@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       
       <Title> Hello </Title>
-      <Input />
+      <Input name="googleSearch" type="search"/>
     </main>
   );
 }
