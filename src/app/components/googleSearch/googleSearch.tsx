@@ -6,6 +6,7 @@ import Input from "./input/input";
 const GoogleSearchWrapper = styled.div`
   display: flex;
   justify-content: center;
+  background-color: gray;
 `
 
 const GoogleSearch = () => {
