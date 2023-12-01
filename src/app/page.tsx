@@ -1,5 +1,5 @@
 import Title from "./Title";
-import Input from "@/components/googleSearch/input/input.tsx";
+import Input from "./components/googleSearch/input/input.tsx";
 
 export default function Home() {
   return (
