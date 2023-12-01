@@ -7,7 +7,7 @@ export default function Home() {
       
       <Title> Hello </Title>
       <Form action="https://google.com/search" method="get" target="_blank">
-      <Input name="googleSearch" type="search"/>
+      <Input name="q" type="search"/>
       </Form>
       </main>
   );
