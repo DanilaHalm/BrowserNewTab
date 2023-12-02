@@ -29,9 +29,9 @@ export const searchOnGoogle = (formData: FormData) => {
     const query = formData.get("q");
     
     try {
-        NextResponse.redirect(new URL(`https://${query}`))
+        return NextResponse.redirect(new URL(`https://${query}`))
     } catch (error) {
-        NextResponse.redirect(new URL(`https://google.com/search?q=${query}`))
+        return NextResponse.redirect(new URL(`https://google.com/search?q=${query}`))
     }
 }
 
