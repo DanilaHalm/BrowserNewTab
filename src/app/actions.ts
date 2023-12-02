@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { NextResponse } from 'next/server'
  
 
-export const checkValidity = async (query: FormDataEntryValue | null) => {
+const checkValidity = async (query: FormDataEntryValue | null) => {
     try {
       const response = await fetch(`https://${query}`) 
       return true
@@ -29,7 +29,7 @@ export const searchOnGoogle = (formData: FormData) => {
     const query = formData.get("q");
     
     try {
-      redirect(`htpps://${query}`)
+      redirect(`https://${query}`)
     } catch (error) {
         redirect(`https://google.com/search?q=${query}`)
     }
