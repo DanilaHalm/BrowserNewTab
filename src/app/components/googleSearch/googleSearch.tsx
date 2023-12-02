@@ -3,7 +3,7 @@ import Input from "./input/input";
 import Wrapper from "./wrapper/wrapper";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { defineAction } from "@/actions";
+import { defineAction } from "@/app/actions";
 
 const GoogleSearch = () => {
 
