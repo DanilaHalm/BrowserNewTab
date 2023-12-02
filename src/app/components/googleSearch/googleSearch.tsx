@@ -8,7 +8,7 @@ const GoogleSearch = () => {
   const defineAction = async (formData: FormData) => {
     "use server"
     const query = formData.get("q")
-    redirect(query)
+    redirect(`https://${query}`)
   }
   return (
     <Wrapper>
