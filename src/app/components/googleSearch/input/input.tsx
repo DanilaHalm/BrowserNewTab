@@ -3,9 +3,8 @@ import styled from "styled-components";
 
 const Input = styled.input`
   width: clamp(300px, 90vw, 800px);
-  height: 2rem;
+  height: 3rem;
   padding: 0 0 0 10px;
-  color: wheat;
   border: none;
   border-radius: 8px;
   background: #2d4754;
@@ -15,6 +14,10 @@ const Input = styled.input`
   &:focus {
     border: none;
     color: white;
+  }
+
+  ::placeholder {
+    color: wheat;
   }
 `
 
