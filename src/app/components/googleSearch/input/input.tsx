@@ -12,12 +12,12 @@ const Input = styled.input`
               inset -20px 20px 60px #345261;
 
   &:focus {
-    border: none;
+    outline: none;
     color: white;
     font-size: 1rem;
   }
 
-  &:placeholder {
+  &::placeholder {
     color: red;
   }
 `
