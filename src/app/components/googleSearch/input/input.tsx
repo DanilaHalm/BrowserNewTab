@@ -5,6 +5,7 @@ const Input = styled.input`
   width: clamp(300px, 90vw, 800px);
   height: 3rem;
   padding: 0 0 0 10px;
+  color: white;
   border: none;
   border-radius: 8px;
   background: #2d4754;
@@ -13,13 +14,17 @@ const Input = styled.input`
 
   &:focus {
     outline: none;
-    color: white;
     font-size: 1rem;
+
+    &::placeholder {
+      color: wheat;
+    }
   }
 
   &::placeholder {
-    color: red;
+    color: white;
   }
+  
 `
 
 export default Input
