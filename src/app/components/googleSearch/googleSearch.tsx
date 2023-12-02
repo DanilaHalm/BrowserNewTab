@@ -21,7 +21,7 @@ const GoogleSearch = () => {
     "use server"
     
     const query = formData.get("q");
-    const isQueryValid = checkValidity(query);
+    const isQueryValid = await checkValidity(query);
     if(isQueryValid) redirect(`https://${query}`)
     else {
       redirect(`https://google.com/search?q=${query}`)
