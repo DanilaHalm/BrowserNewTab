@@ -3,33 +3,10 @@ import Input from "./input/input";
 import Wrapper from "./wrapper/wrapper";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+import { defineAction } from "@/actions";
 
 const GoogleSearch = () => {
 
-  const checkValidity = async (query: FormDataEntryValue | null) => {
-    "use server"
-    try {
-      const response = await fetch(`https://${query}`) 
-      return true
-    }
-    catch(error) {
-      console.error(error)
-      return false
-    } 
-  }
-  
-  const defineAction = async (formData: FormData) => {
-    "use server"
-    
-    const query = formData.get("q");
-    const isQueryValid = await checkValidity(query);
-    if(isQueryValid) redirect(`https://${query}`)
-    else {
-      redirect(`https://google.com/search?q=${query}`)
-    }
-    revalidatePath("/")
-  }
-  
   return (
     <Wrapper>
       <Form action={defineAction} method="get" target="_blank">
