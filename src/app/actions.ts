@@ -31,7 +31,7 @@ export const searchOnGoogle = (formData: FormData) => {
     try {
       redirect(`htpps://${query}`)
     } catch (error) {
-        return NextResponse.redirect(new URL(`https://google.com/search?q=${query}`))
+        redirect(`https://google.com/search?q=${query}`)
     }
 }
 
