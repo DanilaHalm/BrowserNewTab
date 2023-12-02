@@ -2,6 +2,7 @@ import Form from "./form/form";
 import Input from "./input/input";
 import Wrapper from "./wrapper/wrapper";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 const GoogleSearch = () => {
 
@@ -14,7 +15,7 @@ const GoogleSearch = () => {
     catch(error) {
       console.error(error)
       return false
-    }
+    } 
   }
   
   const defineAction = async (formData: FormData) => {
@@ -26,6 +27,7 @@ const GoogleSearch = () => {
     else {
       redirect(`https://google.com/search?q=${query}`)
     }
+    revalidatePath("/")
   }
   
   return (
