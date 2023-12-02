@@ -23,4 +23,12 @@ export const defineAction = async (formData: FormData) => {
     }
   }
 
+export const searchOnGoogle = (formData: FormData) => {
+    const query = formData.get("q");
+    try {
+        redirect(`https://${query}`);
+    } catch (error) {
+        redirect(`https://google.com/search?q=${query}`)
+    }
+}
 
