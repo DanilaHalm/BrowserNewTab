@@ -6,6 +6,8 @@ const Input = styled.input`
   height: 3rem;
   padding: 0 0 0 10px;
   color: white;
+  font-size: 1rem;
+  transition: 0.5s;
   border: none;
   border-radius: 8px;
   background: #2d4754;
@@ -14,10 +16,10 @@ const Input = styled.input`
 
   &:focus {
     outline: none;
-    font-size: 1rem;
+    font-size: 0.7rem;
 
     &::placeholder {
-      color: wheat;
+      opacity: 0.7;
     }
   }
 
