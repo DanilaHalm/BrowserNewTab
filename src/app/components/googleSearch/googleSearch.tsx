@@ -12,18 +12,17 @@ const GoogleSearch = () => {
       const response = await fetch(`https://${query}`)
       if(response.ok) redirect(`https://${query}`)
       else {
-        return false
+        redirect(`https://google.com/search?q=${query}`)
       }
     }
     catch(error) {
       console.error(error)
     }
-    return false
   }
   
   return (
     <Wrapper>
-      <Form action={defineAction ? _ : "https://google.com/search"} method="get" target="_blank">
+      <Form action={defineAction} method="get" target="_blank">
         <Input name="q" type="search" placeholder="Search on Google..."/>
       </Form>
     </Wrapper>
