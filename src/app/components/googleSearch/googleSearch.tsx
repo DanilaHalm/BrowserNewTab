@@ -7,17 +7,18 @@ const GoogleSearch = () => {
   
   const defineAction = async (formData: FormData) => {
     "use server"
-    const query = formData.get("q")
-    try {
-      const response = await fetch(`https://${query}`)
-      if(response.ok) redirect(`https://${query}`)
-      else {
-        redirect(`https://google.com/search?q=${query}`)
-      }
-    }
-    catch(error) {
-      console.error(error)
-    }
+    redirect("https://google.com")
+    //const query = formData.get("q")
+   // try {
+    //  const response = await fetch(`https://${query}`)
+    //  if(response.ok) redirect(`https://${query}`)
+    //  else {
+    //    redirect(`https://google.com/search?q=${query}`)
+   //   }
+  //  }
+ //   catch(error) {
+  //    console.error(error)
+//    }
   }
   
   return (
