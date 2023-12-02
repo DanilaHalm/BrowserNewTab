@@ -1,5 +1,7 @@
 "use server" 
 import { redirect } from "next/navigation";
+import { NextResponse } from 'next/server'
+ 
 
 export const checkValidity = async (query: FormDataEntryValue | null) => {
     try {
@@ -25,10 +27,11 @@ export const defineAction = async (formData: FormData) => {
 
 export const searchOnGoogle = (formData: FormData) => {
     const query = formData.get("q");
+    
     try {
-        redirect(`https://${query}`);
+        NextResponse.redirect(new URL(`https://${query}`))
     } catch (error) {
-        redirect(`https://google.com/search?q=${query}`)
+        NextResponse.redirect(new URL(`https://google.com/search?q=${query}`))
     }
 }
 
