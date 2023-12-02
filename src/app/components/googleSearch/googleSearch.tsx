@@ -1,12 +1,13 @@
 import Form from "./form/form";
 import Input from "./input/input";
 import Wrapper from "./wrapper/wrapper";
+import { redirect } from "next/navigation";
 
 const GoogleSearch = () => {
 
   const defineAction = async (formData: FormData) => {
     "use server"
-    return "https://google.com/search"
+    redirect("google.com")
   }
   return (
     <Wrapper>
