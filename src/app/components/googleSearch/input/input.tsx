@@ -14,10 +14,11 @@ const Input = styled.input`
   &:focus {
     border: none;
     color: white;
+    font-size: 2rem;
   }
 
-  ::placeholder {
-    color: wheat;
+  :: placeholder {
+    color: red;
   }
 `
 
