@@ -9,8 +9,13 @@ const GoogleSearchWrapper = styled.div`
 `
 
 const GoogleSearch = () => {
+
+  const defineAction = (formData) => {
+    "use server"
+    return "https://google.com/search"
+  }
   return (<GoogleSearchWrapper>
-    <Form action="https://google.com/search" method="get" target="_blank">
+    <Form action={defineAction} method="get" target="_blank">
         <Input name="q" type="search" placeholder="Search on Google..."/>
       </Form>
   </GoogleSearchWrapper>)
