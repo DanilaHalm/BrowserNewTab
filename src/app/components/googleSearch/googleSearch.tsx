@@ -4,13 +4,25 @@ import Wrapper from "./wrapper/wrapper";
 import { redirect } from "next/navigation";
 
 const GoogleSearch = () => {
+
+  const checkValidity = async (query: string) => {
+    "use server"
+    try {
+      const response = await fetch(`https://${query}`) 
+      return true
+    }
+    catch(error) {
+      console.error(error)
+      return false
+    }
+  }
   
   const defineAction = async (formData: FormData) => {
     "use server"
     
     const query = formData.get("q");
-    const response = await fetch(`https://${query}`)
-    if(response.ok) redirect(`https://${query}`)
+    const isQueryValid = checkValidity(query);
+    if(isQueryValid) redirect(`https://${query}`)
     else {
       redirect(`https://google.com/search?q=${query}`)
     }
