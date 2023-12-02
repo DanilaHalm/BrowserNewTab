@@ -10,7 +10,7 @@ const GoogleSearchWrapper = styled.div`
 
 const GoogleSearch = () => {
 
-  const defineAction = (formData) => {
+  const defineAction = (formData: FormData) => {
     return "https://google.com/search"
   }
   return (<GoogleSearchWrapper>
