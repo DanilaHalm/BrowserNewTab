@@ -4,7 +4,7 @@ import Wrapper from "./wrapper/wrapper";
 import { redirect } from "next/navigation";
 
 const GoogleSearch = () => {
-
+  
   const defineAction = async (formData: FormData) => {
     "use server"
     const query = formData.get("q")
@@ -18,7 +18,9 @@ const GoogleSearch = () => {
     catch(error) {
       console.error(error)
     }
+    return false
   }
+  
   return (
     <Wrapper>
       <Form action={defineAction ? _ : "https://google.com/search"} method="get" target="_blank">
