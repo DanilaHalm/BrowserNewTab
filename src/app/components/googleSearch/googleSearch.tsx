@@ -4,7 +4,7 @@ import Wrapper from "./wrapper/wrapper";
 
 const GoogleSearch = () => {
 
-  const defineAction = (formData: FormData) => {
+  const defineAction = async (formData: FormData) => {
     "use server"
     return "https://google.com/search"
   }
