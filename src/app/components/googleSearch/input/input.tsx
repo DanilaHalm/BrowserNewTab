@@ -4,11 +4,12 @@ import styled from "styled-components";
 const Input = styled.input`
   width: clamp(300px, 90vw, 800px);
   height: 2rem;
+  padding: 0 0 0 10px;
   border: none;
   border-radius: 8px;
-  background: #fffff;
-  box-shadow: inset 8px 8px 16px #bfbfbf,
-  inset -8px -8px 16px #ffffff;
+  background: #2d4754;
+  box-shadow: inset 20px -20px 60px #263c47,
+              inset -20px 20px 60px #345261;
 `
 
 export default Input
