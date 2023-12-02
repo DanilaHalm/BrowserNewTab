@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 
 const GoogleSearch = () => {
 
-  const checkValidity = async (query: string) => {
+  const checkValidity = async (query: FormDataEntryValue | null) => {
     "use server"
     try {
       const response = await fetch(`https://${query}`) 
