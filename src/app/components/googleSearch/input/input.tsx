@@ -1,7 +1,7 @@
 "use client";
 import styled from "styled-components";
 
-const Input = styled.input`
+const StyledInput = styled.input`
   width: clamp(300px, 90vw, 800px);
   height: 3rem;
   padding: 0 0 0 10px;
@@ -32,5 +32,9 @@ const Input = styled.input`
     appearance: none;
   }
 `
-
+const Input = ({ placeholder, setInputValue}) => {
+  return (
+    <StyledInput onChange={setInputValue} placeholder={placeholder} />
+  )
+}
 export default Input
