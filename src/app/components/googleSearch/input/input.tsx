@@ -32,7 +32,7 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input = ({ placeholder, setInputValue}) => {
+const Input = ({ placeholder, setInputValue} : { placeholder: string, setInputValue: Dispatch<SetStateAction<string>>}) => {
   return (
     <StyledInput onChange={setInputValue} placeholder={placeholder} />
   )
