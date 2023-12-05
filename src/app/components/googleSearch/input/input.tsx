@@ -1,10 +1,5 @@
 "use client";
 
-interface InputProps {
-  setInputValue: React.Dispatch<React.SetStateAction<string>>;
-  placeholder: string;
-}
-
 import styled from "styled-components";
 
 const StyledInput = styled.input`
