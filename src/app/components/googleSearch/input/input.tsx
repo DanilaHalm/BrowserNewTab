@@ -5,7 +5,7 @@ interface IInputProps {
     //onChange: React.Dispatch<React.SetStateAction<string>>
     placeholder: string
     value: string
-    //onChange: (event: ChangeEvent<HTMLInputElement>) => void
+    onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
 import styled from "styled-components";
@@ -41,10 +41,10 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input = ({ value, placeholder} : IInputProps) => {
+const Input = ({ onChange, value, placeholder} : IInputProps) => {
   
   return (
-    <StyledInput placeholder={placeholder} value={value}/>
+    <StyledInput onChange={onChange} placeholder={placeholder} value={value}/>
   )
 }
 export default Input
