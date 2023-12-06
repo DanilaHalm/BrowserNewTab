@@ -8,7 +8,7 @@ import { defineAction, searchOnGoogle } from "@/app/actions";
 const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
   
-  const handleChange = () => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value)
   }
   
