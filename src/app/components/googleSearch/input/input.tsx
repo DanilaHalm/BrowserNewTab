@@ -44,7 +44,7 @@ const StyledInput = styled.input`
 const Input = ({onChange, value, placeholder}) => {
   
   return (
-    <StyledInput onChange={onChange} placeholder={placeholder} value={value}/>
+    <StyledInput onChange={(event) => onChange} placeholder={placeholder} value={value}/>
   )
 }
 export default Input
