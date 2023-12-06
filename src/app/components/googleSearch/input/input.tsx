@@ -41,7 +41,7 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input = ({onChange, value, placeholder}) => {
+const Input = ({onChange: ChangeEvent<HTMLInputElement>, value, placeholder}) => {
   
   return (
     <StyledInput onChange={(event) => onChange} placeholder={placeholder} value={value}/>
