@@ -1,7 +1,7 @@
 "use client";
 
 interface InputProps {
-  setInputValue: React.Dispatch<React.SetStateAction<string>>
+  setInputValue: ChangeEventHandler<HTMLInputElement>
   placeholder: string
 }
 
