@@ -5,7 +5,7 @@ interface IInputProps {
     //onChange: React.Dispatch<React.SetStateAction<string>>
     placeholder: string
     value: string
-    onCange: ChangeEvent<HTMLInputElement>
+    onChange: ChangeEvent<HTMLInputElement>
 }
 
 import styled from "styled-components";
