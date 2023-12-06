@@ -38,7 +38,7 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input: React.FC<IInputProps> = (props: IInputProps) => {
+const Input: React.FC = (props: IInputProps) => {
   return (
     <StyledInput onChange={setInputValue} placeholder={placeholder} />
   )
