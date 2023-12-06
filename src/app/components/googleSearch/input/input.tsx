@@ -1,8 +1,11 @@
 "use client";
+import {ChangeEvent} from "react";
 
 interface IInputProps {
-    onChange: React.Dispatch<React.SetStateAction<string>>
+    //onChange: React.Dispatch<React.SetStateAction<string>>
     placeholder: string
+    value: string
+    onCange: ChangeEvent<HTMLInputElement>
 }
 
 import styled from "styled-components";
@@ -39,9 +42,9 @@ const StyledInput = styled.input`
   }
 `
 const Input: React.FC<IInputProps> = (props: IInputProps) => {
-  const { onChange, placeholder} = props
+  
   return (
-    <StyledInput onChange={onChange} placeholder={placeholder} />
+    <StyledInput onChange={onChange} placeholder={placeholder} value={value}/>
   )
 }
 export default Input
