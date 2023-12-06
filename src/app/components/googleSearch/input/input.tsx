@@ -1,5 +1,10 @@
 "use client";
 
+interface InputProps {
+  setInputValue: React.Dispatch<React.SetStateAction<string>>;
+  placeholder: string;
+}
+
 import styled from "styled-components";
 
 const StyledInput = styled.input`
@@ -33,7 +38,7 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input = React.FC<InputProps> ({ placeholder, setInputValue}) => {
+const Input = ({ placeholder, setInputValue} : <InputProps>) => {
   return (
     <StyledInput onChange={setInputValue} placeholder={placeholder} />
   )
