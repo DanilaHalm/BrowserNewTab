@@ -1,7 +1,7 @@
 "use client";
 
 interface IInputProps {
-    setInputValue: React.Dispatch<React.SetStateAction<string>>
+    onChange: React.Dispatch<React.SetStateAction<string>>
     placeholder: string
 }
 
@@ -38,9 +38,9 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input: React.FC = (props: IInputProps) => {
+const Input: React.FC<IInputProps> = (props: IInputProps) => {
   return (
-    <StyledInput onChange={setInputValue} placeholder={placeholder} />
+    <StyledInput onChange={onChange} placeholder={placeholder} />
   )
 }
 export default Input
