@@ -41,7 +41,7 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input = ({onChange, value, placeholder} : IInputProps) => {
+const Input = ({ value, placeholder} : IInputProps) => {
   
   return (
     <StyledInput placeholder={placeholder} value={value}/>
