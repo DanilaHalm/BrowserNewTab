@@ -38,7 +38,7 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input = ({ placeholder, setInputValue} : <InputProps>) => {
+const Input = ({ placeholder, setInputValue} : InputProps) => {
   return (
     <StyledInput onChange={setInputValue} placeholder={placeholder} />
   )
