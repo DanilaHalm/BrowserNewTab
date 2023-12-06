@@ -7,11 +7,13 @@ import { defineAction, searchOnGoogle } from "@/app/actions";
 
 const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
-  
+  const handleChange = (event) => {
+    setInputValue(event.target.value)
+  }
   return (
     <Wrapper>
       <Form action={searchOnGoogle} method="get" target="_blank">
-        <Input onChange={setInputValue} placeholder={ inputValue? inputValue : "Search on Google..."}/>
+        <Input onChange={setInputValue} value={inputValue} placeholder={"Search on Google..."}/>
       </Form>
     </Wrapper>
   )
