@@ -7,9 +7,11 @@ import { defineAction, searchOnGoogle } from "@/app/actions";
 
 const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
+  const [text, setText] = useState("");
   
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value)
+    setText(JSON.stringify(event))
   }
   
   return (
@@ -17,6 +19,7 @@ const GoogleSearch = () => {
       <Form action={searchOnGoogle} method="get" target="_blank">
         <StyledInput onChange={handleChange} value={inputValue} placeholder="Search on Google..."/>
       </Form>
+      {text}
     </Wrapper>
   )
 }
