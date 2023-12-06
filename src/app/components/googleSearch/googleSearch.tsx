@@ -11,7 +11,7 @@ const GoogleSearch = () => {
   return (
     <Wrapper>
       <Form action={searchOnGoogle} method="get" target="_blank">
-        <Input setInputValue={setInputValue} placeholder={ inputValue? inputValue : "Search on Google..."}/>
+        <Input onChange={setInputValue} placeholder={ inputValue? inputValue : "Search on Google..."}/>
       </Form>
     </Wrapper>
   )
