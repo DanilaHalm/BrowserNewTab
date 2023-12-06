@@ -2,12 +2,12 @@
 import Form from "./form/form";
 import Input from "./input/input";
 import Wrapper from "./wrapper/wrapper";
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 import { defineAction, searchOnGoogle } from "@/app/actions";
 
 const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
-  const handleChange = (event) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value)
   }
   return (
