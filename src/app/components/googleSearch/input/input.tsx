@@ -1,8 +1,10 @@
 "use client";
 
 interface InputProps {
-  setInputValue: ChangeEventHandler<HTMLInputElement>
-  placeholder: string
+  props: {
+    setInputValue: ChangeEventHandler<HTMLInputElement>
+    placeholder: string
+  }
 }
 
 import styled from "styled-components";
