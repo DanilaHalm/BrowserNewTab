@@ -9,15 +9,16 @@ const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
   const [text, setText] = useState("");
   
-  const handleChange = (value: string) => {
-    setInputValue(value)
+  const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+    
+    setInputValue(event.currentTarget.value)
     //setText(JSON.stringify(event))
   }
   
   return (
     <Wrapper>
       <Form action={searchOnGoogle} method="get" target="_blank">
-        <StyledInput onChange={(event)=>handleChange(event.target.value)} value={inputValue} placeholder="Search on Google..."/>
+        <StyledInput onChange={(event)=> handleChange} value={inputValue} placeholder="Search on Google..."/>
       </Form>
       {text}
     </Wrapper>
