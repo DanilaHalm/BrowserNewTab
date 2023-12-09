@@ -16,7 +16,7 @@ const GoogleSearch = () => {
           
         if(res?.ok) setText("true")
           else{
-            setText(res.text())
+            setText(await res.text())
           }
       })
       return response
