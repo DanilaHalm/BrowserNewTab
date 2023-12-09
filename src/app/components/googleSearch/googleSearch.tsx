@@ -1,6 +1,6 @@
 "use client"
 import Form from "./form/form";
-import StyledInput from "./input/input";
+import Input from "./input/input";
 import Wrapper from "./wrapper/wrapper";
 import { useState, ChangeEvent } from "react";
 import { defineAction, searchOnGoogle } from "@/app/actions";
@@ -19,7 +19,7 @@ const GoogleSearch = () => {
    // <Wrapper>
      // <Form action={searchOnGoogle} method="get" target="_blank">
        // <input type="search" onChange={(event) => handleChange(event)} value={inputValue} name="q" />
-       <StyledInput onChange={(event)=> handleChange(event)} value={inputValue} placeholder="Search on Google..."/>
+       <Input onChange={(event)=> handleChange(event)} value={inputValue} placeholder="Search on Google..."/>
     //</Form>
      
    // </Wrapper>
