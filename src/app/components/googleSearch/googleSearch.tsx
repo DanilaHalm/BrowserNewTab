@@ -18,7 +18,7 @@ const GoogleSearch = () => {
   return (
    // <Wrapper>
       //<Form action={searchOnGoogle} method="get" target="_blank">
-        <input type="search" onChange={(event) => handleChange} value={inputValue} name="q" />
+        <input type="search" onChange={(event) => handleChange()} value={inputValue} name="q" />
      //   <StyledInput onChange={(event)=> handleChange} value={inputValue} placeholder="Search on Google..."/>
     // </Form>
      
