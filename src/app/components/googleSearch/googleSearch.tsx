@@ -7,7 +7,7 @@ import { defineAction, searchOnGoogle } from "@/app/actions";
 
 const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
-  const [text, setText] = useState("");
+  const [text, setText] = useState("start");
 
   const checkPath = async(path?:string | undefined) => {
     if(path) {
@@ -42,6 +42,7 @@ const GoogleSearch = () => {
        <Form action={searchOnGoogle} method="get" target="_blank">
       <Input onChange={(event)=> handleChange(event)} value={inputValue} placeholder="Search on Google..."/>
       </Form>
+      {text}
    </Wrapper>
   )
 }
