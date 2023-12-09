@@ -28,17 +28,18 @@ const GoogleSearch = () => {
 
     //setInputValue(newValue)
     if(domains.includes(dom)){
+      let a 
       try {
-        const response = await fetch(`https://vk.com`,{
+        a = await fetch(`https://vk.com`,{
          // headers: {
           //  "Access-Control-Allow-Origin" : "*"
         //  }
         })
-        setText(`${response.status}`)
+        setText(`${a.status}`)
         
       } catch(err) {
         console.error("false")
-        setText(JSON.stringify(response.headers))
+        setText(JSON.stringify(a.headers))
       }
       
     } 
