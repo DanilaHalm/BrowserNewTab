@@ -30,7 +30,7 @@ const GoogleSearch = () => {
     if(domains.includes(dom)){
       try {
         const response = await fetch(`https://${newValue}`)
-        
+        setText(`${response.status}`)
         
       } catch(err) {
         console.error("false")
