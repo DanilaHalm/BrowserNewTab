@@ -20,6 +20,12 @@ const GoogleSearch = () => {
       return 
     }
   }
+
+  
+  const see = (event: ChangeEvent<HTMLInputElement>) => {
+    setText(JSON.stringify(event))
+  }
+
   
   const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const domains: string[] = ["ru","com","by"]
@@ -51,7 +57,7 @@ const GoogleSearch = () => {
   return (
     <Wrapper>
        <Form action={defineAction} method="get" target="_blank">
-      <Input onChange={(event)=> handleChange(event)} value={inputValue} placeholder="Search on Google..."/>
+      <Input onChange={(event)=> see(event)} value={inputValue} placeholder="Search on Google..."/>
       </Form>
       {text}
    </Wrapper>
