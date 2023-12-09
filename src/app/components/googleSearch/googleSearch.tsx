@@ -26,9 +26,9 @@ const GoogleSearch = () => {
     const form = event?.target?.parentNode as HTMLFormElement
     const data = new FormData(form) 
     const query = data.get("q")
-    setText(`${query}`)
+    setText(`${text}${query}`)
     try {
-    const res = await fetch(`https://${query}`)
+    const res = await fetch(`https://${text}`)
     setText(`${res.status}`)
     } catch(err){
       //setText("err")
