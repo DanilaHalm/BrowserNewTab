@@ -36,9 +36,7 @@ const GoogleSearch = () => {
         console.error("false")
       }
       
-    } else {
-      setText("not included")
-    }
+    } 
     
     
     //setText(JSON.stringify(event))
