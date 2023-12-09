@@ -23,7 +23,7 @@ const GoogleSearch = () => {
 
   
   const see = (event: ChangeEvent<HTMLInputElement>) => {
-    setText(`${event}`)
+    setText(JSON.stringify(event?.target))
   }
 
   
