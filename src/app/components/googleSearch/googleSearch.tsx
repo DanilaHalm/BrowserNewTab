@@ -12,9 +12,7 @@ const GoogleSearch = () => {
   const checkPath = async(path?:string | undefined) => {
     if(path) {
       setText("before fetch")
-      const response = fetch(`https://${path}`)
-        .then(res => res.status)
-        .then(status => setText(`${status}`))
+      const response = fetch("https://" + path).then(res => res.status).then(status => setText(`${status}`))
       
     } else {
       return 
