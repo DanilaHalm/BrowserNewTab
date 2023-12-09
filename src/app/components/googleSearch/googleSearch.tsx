@@ -19,7 +19,7 @@ const GoogleSearch = () => {
   }
   
   const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
-    const domains: string[] = ["ru","com","by"]
+    const domains = ["ru","com","by"]
     const newValue = event.target.value;
     const dom = newValue.split(".").at(-1)
     if(domains.includes(dom)){
