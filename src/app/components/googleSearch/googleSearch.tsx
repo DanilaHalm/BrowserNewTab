@@ -26,7 +26,7 @@ const GoogleSearch = () => {
     const newValue: string = "" || event?.target?.value;
     const dom = newValue.split(".").at(-1)
 
-    setInputValue(newValue)
+    //setInputValue(newValue)
     if(domains.includes(dom)){
       try {
         const response = await checkPath(newValue)
@@ -39,7 +39,7 @@ const GoogleSearch = () => {
       
     } 
     
-    
+    setInputValue(newValue)
     //setText(JSON.stringify(event))
   }
   
