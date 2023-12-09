@@ -11,9 +11,10 @@ const GoogleSearch = () => {
 
   const checkPath = async(path?:string | undefined) => {
     if(path) {
+      setText(`${path} - ${typeof path}`)
       const response = fetch(path)
         .then((res)=> res.text())
-        .then((restext) => setText(restext))
+       // .then((restext) => )
       return response
     } else {
       return 
