@@ -13,9 +13,10 @@ const GoogleSearch = () => {
     if(path) {
       const response = fetch(path).
         then((res)=> {
+          
         if(res?.ok) setText("true")
           else{
-            setText("false")
+            setText(res.text)
           }
       })
       return response
