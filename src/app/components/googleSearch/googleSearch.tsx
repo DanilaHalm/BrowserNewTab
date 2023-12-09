@@ -14,15 +14,15 @@ const GoogleSearch = () => {
     setInputValue(event.target.value)
     //setText(JSON.stringify(event))
   }
-//<Form action={searchOnGoogle} method="get" target="_blank">
+//
        // <input type="search" onChange={(event) => handleChange(event)} value={inputValue} name="q" />
         //</Form>
   
   return (
     <Wrapper>
-       
+       <Form action={searchOnGoogle} method="get" target="_blank">
       <Input onChange={(event)=> handleChange(event)} value={inputValue} placeholder="Search on Google..."/>
-   
+      </Form>
    </Wrapper>
   )
 }
