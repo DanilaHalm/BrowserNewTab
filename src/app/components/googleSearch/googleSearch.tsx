@@ -30,6 +30,7 @@ const GoogleSearch = () => {
     setInputValue(`${newValue}`)
     data.append("q", inputValue)
     const query = data.get("q")
+    setText(`${query}`)
     try {
     const res = await fetch(`https://${query}`)
     setText(`${res.status}`)
