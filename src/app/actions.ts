@@ -6,7 +6,7 @@ import { NextResponse } from 'next/server'
 const checkValidity = async (query: FormDataEntryValue | null) => {
     try {
       const response = await fetch(`https://${query}`) 
-      return true
+      return response.status
     }
     catch(error) {
       console.error(error)
