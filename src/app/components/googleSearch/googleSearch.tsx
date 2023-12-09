@@ -9,9 +9,9 @@ const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
   const [text, setText] = useState("");
   
-  const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     
-    setInputValue(event.currentTarget.value)
+    setInputValue(event.target.value)
     //setText(JSON.stringify(event))
   }
   
