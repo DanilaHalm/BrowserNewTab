@@ -31,7 +31,7 @@ const GoogleSearch = () => {
     const res = await fetch(`https://${query}`)
     setText(`${res.status}`)
     } catch(err){
-      setText("err")
+      //setText("err")
     }
   }
 
