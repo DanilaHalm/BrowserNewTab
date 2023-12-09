@@ -27,7 +27,7 @@ const GoogleSearch = () => {
     if(domains.includes(dom)){
       try {
         const response = await checkPath(newValue)
-        if(response.ok) setText("true")
+        if(response?.ok) setText("true")
         else {
           setText("false")
         }
@@ -35,6 +35,8 @@ const GoogleSearch = () => {
         console.error("false")
       }
       
+    } else {
+      setText("start")
     }
     
     
