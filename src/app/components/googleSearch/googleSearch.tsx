@@ -9,7 +9,7 @@ const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
   const [text, setText] = useState("");
 
-  const checkPath = async(path:string) = {
+  const checkPath = async(path:string) => {
     const response = fetch(path)
     return response
   }
