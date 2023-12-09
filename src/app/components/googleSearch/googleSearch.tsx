@@ -22,18 +22,22 @@ const GoogleSearch = () => {
     const domains: string[] = ["ru","com","by"]
     const newValue: string = "" || event?.target?.value;
     const dom = newValue.split(".").at(-1)
-    
+
+    setInputValue(newValue)
     if(domains.includes(dom)){
       try {
         const response = await checkPath(newValue)
-        setText("true")
+        if(response.ok) setText("true")
+        else {
+          setText("false")
+        }
       } catch(err) {
-        setText("false")
+        console.error("false")
       }
       
     }
     
-    setInputValue(newValue)
+    
     //setText(JSON.stringify(event))
   }
   
