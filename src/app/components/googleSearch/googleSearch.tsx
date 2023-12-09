@@ -26,7 +26,7 @@ const GoogleSearch = () => {
     setInputValue(newValue)
     if(domains.includes(dom)){
       try {
-        const response = await checkPath(newValue)
+        const response = await fetch(newValue)
         if(response?.ok) setText("true")
         else {
           setText("false")
