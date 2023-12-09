@@ -12,7 +12,7 @@ const GoogleSearch = () => {
   const checkPath = async(path?:string | undefined) => {
     if(path) {
       
-      const response = await fetch("https://vk.com")
+      const response = await fetch(`https://${inputValue}`)
      //  .then(res => res.status)
       // .then(status => setText(`${status}`))
       setText(JSON.stringify(response))
