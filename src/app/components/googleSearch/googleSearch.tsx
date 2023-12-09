@@ -37,7 +37,7 @@ const GoogleSearch = () => {
       }
       
     } else {
-      setText("start")
+      setText("not included")
     }
     
     
