@@ -25,8 +25,9 @@ const GoogleSearch = () => {
   const see = async (event: ChangeEvent<HTMLInputElement>) => {
     const form = event?.target?.parentNode as HTMLFormElement
     const data = new FormData(form) 
+    const newvalue = event?.target?.value
     
-    setText(`${text}${query}`)
+    setText(`${newValue}`)
     data.append("q", text)
     const query = data.get("q")
     try {
