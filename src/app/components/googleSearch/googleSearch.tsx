@@ -16,13 +16,13 @@ const GoogleSearch = () => {
   }
   
   return (
-   // <Wrapper>
-     // <Form action={searchOnGoogle} method="get" target="_blank">
+    <Wrapper>
+      {// <Form action={searchOnGoogle} method="get" target="_blank">
        // <input type="search" onChange={(event) => handleChange(event)} value={inputValue} name="q" />
        <Input onChange={(event)=> handleChange(event)} value={inputValue} placeholder="Search on Google..."/>
     //</Form>
-     
-   // </Wrapper>
+      }
+   </Wrapper>
   )
 }
 
