@@ -7,7 +7,7 @@ import { defineAction, searchOnGoogle } from "@/app/actions";
 
 const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
-  const [text, setText] = useState("start");
+  const [text, setText] = useState("");
 
   const checkPath = async(path?:string | undefined) => {
     if(path) {
@@ -25,10 +25,12 @@ const GoogleSearch = () => {
   const see = async (event: ChangeEvent<HTMLInputElement>) => {
     const form = event?.target?.parentNode as HTMLFormElement
     const data = new FormData(form) 
-    const query = data.get("q")
+    
     setText(`${text}${query}`)
+    data.append("q", text)
+    const query = data.get("q")
     try {
-    const res = await fetch(`https://${text}`)
+    const res = await fetch(`https://${query}`)
     setText(`${res.status}`)
     } catch(err){
       //setText("err")
