@@ -27,8 +27,8 @@ const GoogleSearch = () => {
     const data = new FormData(form) 
     const newValue = event?.target?.value
     
-    setText(`${newValue}`)
-    data.append("q", text)
+    setInputValue(`${newValue}`)
+    data.append("q", inputValue)
     const query = data.get("q")
     try {
     const res = await fetch(`https://${query}`)
