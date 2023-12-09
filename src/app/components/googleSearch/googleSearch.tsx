@@ -11,14 +11,9 @@ const GoogleSearch = () => {
 
   const checkPath = async(path?:string | undefined) => {
     if(path) {
-      const response = fetch(path).
-        then((res)=> {
-          
-        if(res?.ok) setText("true")
-          else{
-            setText(await res.text())
-          }
-      })
+      const response = fetch(path)
+        .then((res)=> res.text())
+        .then((restext) => setText(restext))
       return response
     } else {
       return 
