@@ -11,7 +11,7 @@ const GoogleSearch = () => {
 
   const checkPath = async(path?:string | undefined) => {
     if(path) {
-      setText(`${path} - ${typeof path}`)
+      
       const response = fetch(`https://${path}`)
         .then((res)=> res.status)
         .then((status) => setText(`${status}`))
