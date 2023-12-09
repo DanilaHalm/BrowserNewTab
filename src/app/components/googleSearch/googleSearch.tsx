@@ -23,8 +23,8 @@ const GoogleSearch = () => {
 
   
   const see = async (event: ChangeEvent<HTMLInputElement>) => {
-    const form = event?.target?.parentNode
-    const data = new FormData(form)
+    const form = event?.target?.parentNode as HTMLFormElement
+    const data = new FormData(form) 
     const query = data.get("q")
     try {
     const res = await fetch(`https://${query}`)
