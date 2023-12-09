@@ -9,9 +9,13 @@ const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
   const [text, setText] = useState("");
 
-  const checkPath = async(path:string) => {
-    const response = fetch(path)
-    return response
+  const checkPath = async(path?:string) => {
+    if(path) {
+      const response = fetch(path)
+      return response
+    } else {
+      return 
+    }
   }
   
   const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
