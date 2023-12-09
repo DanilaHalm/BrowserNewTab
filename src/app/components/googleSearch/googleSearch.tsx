@@ -13,9 +13,9 @@ const GoogleSearch = () => {
     if(path) {
       setText(`https://${path}`)
       const response = fetch(text)
-       // .then(res => res.status)
-       // .then(status => setText(`${status}`))
-      setText(JSON.stringify(await response))
+       .then(res => res.status)
+       .then(status => setText(`${status}`))
+      //setText(JSON.stringify(await response))
     } else {
       return 
     }
