@@ -25,7 +25,7 @@ const GoogleSearch = () => {
     const dom:string = "qwerty"
     if(domains.includes(dom)){
       const response = await checkPath(newValue)
-      if(response.ok){
+      if(response?.ok){
         setText("true")
       } else {
         setText("false")
