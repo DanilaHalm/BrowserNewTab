@@ -8,15 +8,27 @@ import { defineAction, searchOnGoogle } from "@/app/actions";
 const GoogleSearch = () => {
   const [inputValue, setInputValue] = useState("");
   const [text, setText] = useState("");
+
+  const checkPath = async(path:string) = {
+    const response = fetch(path)
+    return response
+  }
   
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
+    const domains: string[] = ["ru","com","by"]
+    const newValue = event.target.value;
+    if(domains.includes(newValue.split(".").at(-1))){
+      const response = await checkPath(newValue)
+      if(response.ok){
+        setText("true")
+      } else {
+        setText("false")
+      }
+    }
     
-    setInputValue(event.target.value)
+    setInputValue(newValue)
     //setText(JSON.stringify(event))
   }
-//
-       // <input type="search" onChange={(event) => handleChange(event)} value={inputValue} name="q" />
-        //</Form>
   
   return (
     <Wrapper>
