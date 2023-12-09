@@ -11,7 +11,13 @@ const GoogleSearch = () => {
 
   const checkPath = async(path?:string | undefined) => {
     if(path) {
-      const response = fetch(path)
+      const response = fetch(path).
+        then((res)=> {
+        if(res?.ok) setText("true")
+          else{
+            setText("false")
+          }
+      })
       return response
     } else {
       return 
@@ -26,11 +32,9 @@ const GoogleSearch = () => {
     setInputValue(newValue)
     if(domains.includes(dom)){
       try {
-        const response = await fetch(newValue)
-        if(response?.ok) setText("true")
-        else {
-          setText("false")
-        }
+        const response = await checkPath(newValue)
+        
+        
       } catch(err) {
         console.error("false")
       }
