@@ -30,11 +30,11 @@ const GoogleSearch = () => {
     if(domains.includes(dom)){
       
       try {
-        const response = await fetch(`https://vk.com`)
-         // headers: {
-          //  "Access-Control-Allow-Origin" : "*"
-        //  }
-        
+        const response = await fetch(`https://vk.com`,{
+         headers: {
+           "Access-Control-Allow-Origin": "https://browser-new-tab.vercel.app/"
+         }
+        })
         setText(`${response.status}`)
         
       } catch(err) {
