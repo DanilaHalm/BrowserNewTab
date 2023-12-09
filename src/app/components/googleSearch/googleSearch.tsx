@@ -14,7 +14,7 @@ const GoogleSearch = () => {
       setText(`${path} - ${typeof path}`)
       const response = fetch(`https://${path}`)
         .then((res)=> res.status)
-        .then((status) => setText(status))
+        .then((status) => setText(`${status}`))
       return response
     } else {
       return 
