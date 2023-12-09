@@ -30,15 +30,15 @@ const GoogleSearch = () => {
     if(domains.includes(dom)){
       try {
         const response = await fetch(`https://vk.com`,{
-          headers: {
-            "Access-Control-Allow-Origin" : "*"
-          }
+         // headers: {
+          //  "Access-Control-Allow-Origin" : "*"
+        //  }
         })
         setText(`${response.status}`)
         
       } catch(err) {
         console.error("false")
-        setText(`err: ${err}`)
+        setText(JSON.stringify(response.headers))
       }
       
     } 
