@@ -21,7 +21,8 @@ const GoogleSearch = () => {
   const handleChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const domains: string[] = ["ru","com","by"]
     const newValue = event.target.value;
-    if(domains.includes(newValue.split(".").at(-1))){
+    const dom = newValue.split(".").at(-1)
+    if(domains.includes(dom)){
       const response = await checkPath(newValue)
       if(response.ok){
         setText("true")
