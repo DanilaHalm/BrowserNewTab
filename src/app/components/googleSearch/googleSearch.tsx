@@ -13,8 +13,8 @@ const GoogleSearch = () => {
     if(path) {
       setText(`${path} - ${typeof path}`)
       const response = fetch(path)
-        .then((res)=> setText(JSON.stringify(res)))
-       // .then((status) => setText(`${status}`))
+        .then((res)=> res.json())
+        .then((status) => setText(JSON.stringify(res)))
       return response
     } else {
       return 
