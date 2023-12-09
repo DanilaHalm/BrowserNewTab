@@ -24,12 +24,13 @@ const GoogleSearch = () => {
     const dom = newValue.split(".").at(-1)
     
     if(domains.includes(dom)){
-      const response = await checkPath(newValue)
-      if(response?.ok){
+      try {
+        const response = await checkPath(newValue)
         setText("true")
-      } else {
+      } catch(err) {
         setText("false")
       }
+      
     }
     
     setInputValue(newValue)
