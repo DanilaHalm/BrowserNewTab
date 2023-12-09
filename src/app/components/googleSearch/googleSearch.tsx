@@ -11,10 +11,10 @@ const GoogleSearch = () => {
 
   const checkPath = async(path?:string | undefined) => {
     if(path) {
-      
+      setText("before fetch")
       const response = fetch(`https://${path}`)
         .then(res => setText(`${res.status}`))
-        
+      
       return response
     } else {
       return 
