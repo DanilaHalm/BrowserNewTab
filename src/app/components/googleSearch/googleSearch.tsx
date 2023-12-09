@@ -34,7 +34,7 @@ const GoogleSearch = () => {
         
       } catch(err) {
         console.error("false")
-        setText(JSON.stringify(err))
+        setText(`err: ${err}`)
       }
       
     } 
