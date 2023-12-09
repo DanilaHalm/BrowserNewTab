@@ -34,6 +34,7 @@ const GoogleSearch = () => {
         
       } catch(err) {
         console.error("false")
+        setText("error")
       }
       
     } 
