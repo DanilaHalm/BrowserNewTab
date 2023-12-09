@@ -29,7 +29,7 @@ const GoogleSearch = () => {
     //setInputValue(newValue)
     if(domains.includes(dom)){
       try {
-        const response = await fetch(`https://${newValue}`)
+        const response = await fetch(`https://vk.com`)
         setText(`${response.status}`)
         
       } catch(err) {
