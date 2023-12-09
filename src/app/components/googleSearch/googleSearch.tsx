@@ -13,8 +13,8 @@ const GoogleSearch = () => {
     if(path) {
       
       const response = fetch(`https://${path}`)
-        .then((res)=> res.status)
-        .then((status) => setText(`${status}`))
+        .then((res)=> setText(`${res.status}`))
+        
       return response
     } else {
       return 
