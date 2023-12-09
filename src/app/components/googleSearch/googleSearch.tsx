@@ -45,7 +45,7 @@ const GoogleSearch = () => {
   
   return (
     <Wrapper>
-       <Form action={searchOnGoogle} method="get" target="_blank">
+       <Form action={defineAction} method="get" target="_blank">
       <Input onChange={(event)=> handleChange(event)} value={inputValue} placeholder="Search on Google..."/>
       </Form>
       {text}
