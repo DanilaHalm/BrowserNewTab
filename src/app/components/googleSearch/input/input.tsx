@@ -1,11 +1,11 @@
 "use client";
-import {ChangeEvent} from "react";
+//import {ChangeEvent} from "react";
 
 interface IInputProps {
     //onChange: React.Dispatch<React.SetStateAction<string>>
-    placeholder: string
-    value: string
-    onChange: (event: ChangeEvent<HTMLInputElement>) => void
+    //placeholder: string
+    //value: string
+    //onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
 import styled from "styled-components";
@@ -41,10 +41,10 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input = ({ onChange, value, placeholder} : IInputProps) => {
+const Input = () => {
   
   return (
-    <StyledInput name="q" onChange={(event) => onChange(event)} placeholder={placeholder} value={value}/>
+    <StyledInput name="q" placeholder="Type URL or search on Google..." />
   )
 }
 export default Input
