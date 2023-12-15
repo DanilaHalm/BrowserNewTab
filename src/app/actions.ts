@@ -1,12 +1,10 @@
 "use server" 
 import { redirect } from "next/navigation";
-import { NextResponse } from 'next/server'
- 
 
 const checkValidity = async (query: FormDataEntryValue | null) => {
     try {
-      const response = await fetch(`https://${query}`) 
-      return response.status
+      const response = await fetch(`https://${query}`, {method: 'HEAD'}) 
+      return response.status === 200
     }
     catch(error) {
       console.error(error)
@@ -24,14 +22,3 @@ export const defineAction = async (formData: FormData) => {
       redirect(`https://google.com/search?q=${query}`)
     }
   }
-
-export const searchOnGoogle = (formData: FormData) => {
-    const query = formData.get("q");
-    
-    try {
-      redirect(`https://${query}`)
-    } catch (error) {
-        redirect(`https://google.com/search?q=${query}`)
-    }
-}
-
