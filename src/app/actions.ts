@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 const checkValidity = async (query: FormDataEntryValue | null) => {
     try {
       const response = await fetch(`https://${query}`, {method: 'HEAD'}) 
-      return response.status === 200
+      return response.ok
     }
     catch(error) {
       console.error(error)
