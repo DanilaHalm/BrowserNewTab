@@ -18,7 +18,7 @@ const GoogleSearch = () => {
   return (
     <Wrapper>
       <Form action={formAction} method="GET">
-        <Input />
+        <Input dfV={state?.value}/>
       </Form>
    </Wrapper>
   )
