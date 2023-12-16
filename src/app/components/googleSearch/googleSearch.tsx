@@ -8,8 +8,8 @@ import { useFormState } from 'react-dom'
 import { defineAction } from "@/app/actions";
 
 const GoogleSearch = () => {
-  const initialState = {
-    value: ""
+  const initialState: {value: string} = {
+    value: "" 
   }
   const [state, formAction] = useFormState(defineAction, initialState);
   
