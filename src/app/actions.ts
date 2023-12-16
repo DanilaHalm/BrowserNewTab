@@ -19,7 +19,7 @@ export const defineAction = async (prevState: any,formData: FormData) => {
   //  const isQueryValid = await checkValidity(query);
   //  if(isQueryValid) redirect(`https://${query}`)
  //   else {
-      redirect(`https://google.com/search?q=${query}`)
+      redirect(`https://google.com/search?q=${query? query: prevState?.value}`)
  //   }
     return {
         value: query
