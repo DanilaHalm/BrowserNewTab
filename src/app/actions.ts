@@ -13,7 +13,7 @@ const checkValidity = async (query: FormDataEntryValue | null) => {
   }
 
   
-export const defineAction = async (formData: FormData) => {
+export const defineAction = async (prevState: FormData,formData: FormData) => {
     
     const query = formData.get("q");
   //  const isQueryValid = await checkValidity(query);
@@ -21,4 +21,7 @@ export const defineAction = async (formData: FormData) => {
  //   else {
       redirect(`https://google.com/search?q=${query}`)
  //   }
+    return {
+        value: query
+    }
   }
