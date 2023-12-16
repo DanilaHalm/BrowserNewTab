@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 import { defineAction } from "@/app/actions";
 
 const GoogleSearch = () => {
-  const x = true
+  const x = false
   return (
     <Wrapper>
       <Form action={x? "https://google.com/search" : redirect("https://google.com")} method="GET">
