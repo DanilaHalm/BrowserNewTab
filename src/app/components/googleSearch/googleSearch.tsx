@@ -9,7 +9,7 @@ const GoogleSearch = () => {
   
   return (
     <Wrapper>
-      <Form action={defineAction}>
+      <Form action="https://google.com/search" method="GET">
         <Input />
       </Form>
    </Wrapper>
