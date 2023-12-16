@@ -44,7 +44,7 @@ const StyledInput = styled.input`
 const Input = () => {
   
   return (
-    <StyledInput name="q" placeholder="Type URL or search on Google..." />
+    <StyledInput name="q" placeholder="Type URL or search on Google..." defaultValue="test"/>
   )
 }
 export default Input
