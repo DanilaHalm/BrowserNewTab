@@ -10,7 +10,7 @@ const GoogleSearch = () => {
   const x = false
   return (
     <Wrapper>
-      <Form action={x? "https://google.com/search" : redirect("https://google.com")} method="GET">
+      <Form action={x? "https://google.com/search" : () => redirect("https://google.com")} method="GET">
         <Input />
       </Form>
    </Wrapper>
