@@ -13,7 +13,7 @@ const checkValidity = async (query: FormDataEntryValue | null) => {
   }
 
   
-export const defineAction = async (prevState: FormData,formData: FormData) => {
+export const defineAction = async (prevState: any,formData: FormData) => {
     
     const query = formData.get("q");
   //  const isQueryValid = await checkValidity(query);
