@@ -41,10 +41,10 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `
-const Input = () => {
+const Input = ({dfV: string}) => {
   
   return (
-    <StyledInput name="q" placeholder="Type URL or search on Google..." defaultValue="test"/>
+    <StyledInput name="q" placeholder="Type URL or search on Google..." defaultValue={dfV}/>
   )
 }
 export default Input
