@@ -12,19 +12,6 @@ interface IInputProps {
 
 import styled from "styled-components";
 
-const PendingDiv = styled.div`
-  width: clamp(300px, 90vw, 800px);
-  height: 3rem;
-  padding: 0 0 0 10px;
-  color: white;
-  font-size: 1rem;
-  transition: 0.5s;
-  border: none;
-  border-radius: 8px;
-  background: #2d4754;
-  box-shadow: inset 5px 5px 10px #263c47, inset -5px -5px 10px #345261;
-`
-
 const StyledInput = styled.input`
   width: clamp(300px, 90vw, 800px);
   height: 3rem;
@@ -37,6 +24,10 @@ const StyledInput = styled.input`
   background: #2d4754;
   box-shadow: inset 5px 5px 10px #263c47, inset -5px -5px 10px #345261;
 
+  &:disabled {
+    background: #FFFFFF;
+  }
+  
   &:focus {
     outline: none;
     
