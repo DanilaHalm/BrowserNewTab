@@ -2,7 +2,7 @@
 import Form from "./form/form";
 import Input from "./input/input";
 import Wrapper from "./wrapper/wrapper";
-import { redirect } from "next/navigation";
+import { redirect, RedirectType } from "next/navigation";
 import { useFormState } from "react-dom";
 
 import { defineAction } from "@/app/actions";
@@ -13,7 +13,7 @@ const GoogleSearch = () => {
     link: ""
   };
   const [state, formAction] = useFormState(defineAction, initialState);
-  if(state?.link) redirect(state?.link, "push")
+  if(state?.link) redirect(state?.link, RedirectType.push)
   return (
     <Wrapper>
       <Form action={formAction}>
