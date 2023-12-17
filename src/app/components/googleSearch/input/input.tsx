@@ -10,7 +10,7 @@ interface IInputProps {
   //onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 
 const StyledDiv = styled.div`
@@ -26,6 +26,17 @@ const StyledDiv = styled.div`
   box-shadow: inset 5px 5px 10px #263c47, inset -5px -5px 10px #345261;
   
 `
+const blink = keyframes`
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+`
 
 const StyledInput = styled.input`
   width: clamp(300px, 90vw, 800px);
@@ -38,6 +49,7 @@ const StyledInput = styled.input`
   border-radius: 8px;
   background: #2d4754;
   box-shadow: inset 5px 5px 10px #263c47, inset -5px -5px 10px #345261;
+  animation: ${blink} 1s linear infinite;
   
   &:focus {
     outline: none;
@@ -99,6 +111,6 @@ const StyledInput = styled.input`
 const Input = () => {
   const { pending } = useFormStatus();
   
-  return pending ? <StyledDiv>{"pending"}</StyledDiv> : <StyledInput name="q" placeholder="Type URL or search on Google..." autoComplete="off" />
+  return <StyledInput name="q" placeholder="Type URL or search on Google..." autoComplete="off" />
 };
 export default Input;
