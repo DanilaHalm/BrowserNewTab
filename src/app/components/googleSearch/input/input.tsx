@@ -98,10 +98,9 @@ const Input = () => {
   const { pending } = useFormStatus();
   
   return ( 
-   { pending ? 
-   <PendingDiv> Loading... </PendingDiv> :
-   <StyledInput name="q" placeholder="Type URL or search on Google..." autoComplete="off" />;
-   }
+   
+   <StyledInput disabled={pending} name="q" placeholder="Type URL or search on Google..." autoComplete="off" />;
+   
    )
 };
 export default Input;
