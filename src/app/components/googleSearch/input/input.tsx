@@ -23,10 +23,6 @@ const StyledInput = styled.input`
   border-radius: 8px;
   background: #2d4754;
   box-shadow: inset 5px 5px 10px #263c47, inset -5px -5px 10px #345261;
-
-  &:disabled {
-    background: #FFFFFF;
-  }
   
   &:focus {
     outline: none;
@@ -88,6 +84,6 @@ const StyledInput = styled.input`
 const Input = () => {
   const { pending } = useFormStatus();
   
-  return <StyledInput disabled={pending} name="q" placeholder="Type URL or search on Google..." autoComplete="off" />
+  return <StyledInput name="q" placeholder="Type URL or search on Google..." autoComplete="off" />
 };
 export default Input;
