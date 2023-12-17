@@ -10,7 +10,7 @@ interface IInputProps {
   //onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
-import styled, {keyframes} from "styled-components";
+import styled, {keyframes, css} from "styled-components";
 
 
 const StyledDiv = styled.div`
