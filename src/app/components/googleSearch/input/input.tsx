@@ -25,6 +25,7 @@ const StyledInput = styled.input`
 
   &:focus {
     outline: none;
+    color: white;
     font-size: 0.7rem;
 
     &::placeholder {
