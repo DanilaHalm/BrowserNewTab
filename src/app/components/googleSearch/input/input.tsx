@@ -43,6 +43,7 @@ const StyledInput = styled.input`
   }
 
   &:autofill {
+    -webkit-text-fill-color: white;
     color: white;
     box-shadow: 0 0 0px 1000px #2d4754 inset;
     caret-color: white;
@@ -55,12 +56,14 @@ const StyledInput = styled.input`
     caret-color: white;
     
     &:focus {
+      color:white;
       -webkit-text-fill-color: white;
       -webkit-box-shadow: 0 0 0px 1000px #2d4754 inset;
       caret-color: white;
     }
 
     &:hover {
+      color:white;
       -webkit-text-fill-color: white;
       -webkit-box-shadow: 0 0 0px 1000px #2d4754 inset;
       caret-color: white;
