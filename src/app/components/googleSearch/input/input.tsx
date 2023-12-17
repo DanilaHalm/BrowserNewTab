@@ -38,6 +38,7 @@ const StyledInput = styled.input`
     
     &:-webkit-autofill {
       color:white;
+      -webkit-text-fill-color: white;
     }
   }
 
@@ -46,6 +47,7 @@ const StyledInput = styled.input`
   }
   &:-webkit-autofill {
     color:white;
+    -webkit-text-fill-color: white
   }
   
   &::placeholder {
