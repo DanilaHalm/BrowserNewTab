@@ -80,6 +80,6 @@ const StyledInput = styled.input`
   }
 `;
 const Input = () => {
-  return <StyledInput name="q" placeholder="Type URL or search on Google..." />;
+  return <StyledInput name="q" placeholder="Type URL or search on Google..." autocomplete="off" />;
 };
 export default Input;
