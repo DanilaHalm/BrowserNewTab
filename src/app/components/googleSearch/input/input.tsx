@@ -49,7 +49,11 @@ const StyledInput = styled.input<{ $pending?: boolean; }>`
   border-radius: 8px;
   background: #2d4754;
   box-shadow: inset 5px 5px 10px #263c47, inset -5px -5px 10px #345261;
-  animation: ${props => props.$pending ? "${blink} 1s linear infinite" : "none"};
+  animation: ${props => 
+    props.$pending && 
+    css`
+      ${blink} 1s linear infinite
+    `};
   
   &:focus {
     outline: none;
