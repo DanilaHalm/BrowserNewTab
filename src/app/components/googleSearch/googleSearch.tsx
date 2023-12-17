@@ -13,7 +13,7 @@ const GoogleSearch = () => {
     link: ""
   };
   const [state, formAction] = useFormState(defineAction, initialState);
-  if(state?.link) redirect(state?.link, RedirectType.replace)
+  if(state?.link) redirect(state?.link, RedirectType.push)
   return (
     <Wrapper>
       <Form action={formAction}>
