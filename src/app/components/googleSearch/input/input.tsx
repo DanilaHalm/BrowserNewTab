@@ -38,7 +38,7 @@ const blink = keyframes`
   }
 `
 
-const StyledInput = styled.input`
+const StyledInput = styled.input<{ $pending?: boolean; }>`
   width: clamp(300px, 90vw, 800px);
   height: 3rem;
   padding: 0 0 0 10px;
@@ -49,7 +49,7 @@ const StyledInput = styled.input`
   border-radius: 8px;
   background: #2d4754;
   box-shadow: inset 5px 5px 10px #263c47, inset -5px -5px 10px #345261;
-  animation: ${blink} 1s linear infinite;
+  animation: ${props => props.$pending ? `${blink} 1s linear infinite` : "none"};
   
   &:focus {
     outline: none;
@@ -111,6 +111,6 @@ const StyledInput = styled.input`
 const Input = () => {
   const { pending } = useFormStatus();
   
-  return <StyledInput name="q" placeholder="Type URL or search on Google..." autoComplete="off" />
+  return <StyledInput $pending name="q" placeholder="Type URL or search on Google..." autoComplete="off" />
 };
 export default Input;
