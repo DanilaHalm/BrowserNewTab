@@ -18,18 +18,18 @@ export const defineAction = async (prevState: any, formData: FormData) => {
   if (isQueryValid) {
     const uri = `https://${query}`;
     const encodedURI = encodeURI(uri);
-    return {
-      value: query,
-      link: encodedURI
-    }
-    //redirect(encodedURI);
+    //return {
+    //  value: query,
+    //  link: encodedURI
+    //}
+    redirect(encodedURI);
   } else {
     const uri = `https://google.com/search?q=${query ? query : prevState?.value}`;
     const encodedURI = encodeURI(uri);
-    return {
-      value: query,
-      link: encodedURI
-    }
-    //redirect(encodedURI);
+    //return {
+    //  value: query,
+    //  link: encodedURI
+   // }
+    redirect(encodedURI);
   }
 };
