@@ -10,6 +10,7 @@ import { defineAction } from "@/app/actions";
 const GoogleSearch = () => {
   const initialState = {
     value: "",
+    link: ""
   };
   const [state, formAction] = useFormState(defineAction, initialState);
 
