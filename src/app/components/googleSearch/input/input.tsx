@@ -44,24 +44,24 @@ const StyledInput = styled.input`
 
   &:autofill {
     color: white;
-    box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+    box-shadow: none;
     background: #2d4754;
   }
   &:-webkit-autofill {
     color:white;
     -webkit-text-fill-color: white;
-    -webkit-box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+    -webkit-box-shadow: none;
     -webkit-background: #2d4754;
     
     &:focus {
       -webkit-text-fill-color: white;
-      -webkit-box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+      -webkit-box-shadow: none;
       -webkit-background: #2d4754;
     }
 
     &:hover {
       -webkit-text-fill-color: white;
-      -webkit-box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+      -webkit-box-shadow: none;
       -webkit-background: #2d4754;
     }
   }
