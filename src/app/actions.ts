@@ -24,7 +24,7 @@ export const defineAction = async (formData: FormData) => {
     //}
     redirect(encodedURI);
   } else {
-    const uri = `https://google.com/search?q=${query ? query : prevState?.value}`;
+    const uri = `https://google.com/search?q=${query}`;
     const encodedURI = encodeURI(uri);
     //return {
     //  value: query,
