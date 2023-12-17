@@ -2,10 +2,11 @@
 //import {ChangeEvent} from "react";
 
 interface IInputProps {
-    //onChange: React.Dispatch<React.SetStateAction<string>>
-    //placeholder: string
-    //value: string
-    //onChange: (event: ChangeEvent<HTMLInputElement>) => void
+  dfV: string;
+  //onChange: React.Dispatch<React.SetStateAction<string>>
+  //placeholder: string
+  //value: string
+  //onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
 import styled from "styled-components";
@@ -20,9 +21,8 @@ const StyledInput = styled.input`
   border: none;
   border-radius: 8px;
   background: #2d4754;
-  box-shadow: inset 20px -20px 60px #263c47,
-              inset -20px 20px 60px #345261;
-  
+  box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+
   &:focus {
     outline: none;
     font-size: 0.7rem;
@@ -40,11 +40,8 @@ const StyledInput = styled.input`
     -webkit-appearance: none;
     appearance: none;
   }
-`
-const Input = (dfV: string) => {
-  
-  return (
-    <StyledInput name="q" placeholder="Type URL or search on Google..." defaultValue={dfV}/>
-  )
-}
-export default Input
+`;
+const Input = ({ dfV }: IInputProps) => {
+  return <StyledInput name="q" placeholder="Type URL or search on Google..." defaultValue={dfV} />;
+};
+export default Input;
