@@ -21,7 +21,7 @@ const StyledInput = styled.input`
   border: none;
   border-radius: 8px;
   background: #2d4754;
-  box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+  box-shadow: inset 5px 5px 20px #263c47, inset -5px -5px 20px #345261;
 
   &:focus {
     outline: none;
