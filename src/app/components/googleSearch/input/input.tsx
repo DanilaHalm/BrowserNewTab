@@ -115,6 +115,6 @@ const StyledInput = styled.input<{ $pending?: boolean; }>`
 const Input = () => {
   const { pending } = useFormStatus();
   
-  return <StyledInput $pending name="q" placeholder="Type URL or search on Google..." autoComplete="off" />
+  return <StyledInput $pending={pending} name="q" placeholder="Type URL or search on Google..." autoComplete="off" />
 };
 export default Input;
