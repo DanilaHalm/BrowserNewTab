@@ -50,19 +50,19 @@ const StyledInput = styled.input`
   &:-webkit-autofill {
     color:white;
     -webkit-text-fill-color: white;
-    box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
-    background: #2d4754;
+    -webkit-box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+    -webkit-background: #2d4754;
     
     &:focus {
       -webkit-text-fill-color: white;
-      box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
-      background: #2d4754;
+      -webkit-box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+      -webkit-background: #2d4754;
     }
 
     &:hover {
       -webkit-text-fill-color: white;
-      box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
-      background: #2d4754;
+      -webkit-box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+      -webkit-background: #2d4754;
     }
   }
   
