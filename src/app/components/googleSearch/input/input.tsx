@@ -44,6 +44,8 @@ const StyledInput = styled.input`
 
   &:autofill {
     color: white;
+    box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
+
   }
   &:-webkit-autofill {
     color:white;
