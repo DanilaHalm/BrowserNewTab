@@ -20,11 +20,12 @@ const StyledInput = styled.input`
   transition: 0.5s;
   border: none;
   border-radius: 8px;
-  background: #2d4754;
+  background: linear-gradient(145deg, #114f4a, #345261);
   box-shadow: inset 20px -20px 60px #263c47, inset -20px 20px 60px #345261;
 
   &:focus {
     outline: none;
+    background: #2d4754;
     color: white;
     font-size: 0.7rem;
 
