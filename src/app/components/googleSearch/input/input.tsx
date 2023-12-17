@@ -2,7 +2,7 @@
 //import {ChangeEvent} from "react";
 
 interface IInputProps {
-  dfV: string;
+ // dfV: string;
   //onChange: React.Dispatch<React.SetStateAction<string>>
   //placeholder: string
   //value: string
@@ -41,7 +41,7 @@ const StyledInput = styled.input`
     appearance: none;
   }
 `;
-const Input = ({ dfV }: IInputProps) => {
-  return <StyledInput name="q" placeholder="Type URL or search on Google..." defaultValue={dfV} />;
+const Input = () => {
+  return <StyledInput name="q" placeholder="Type URL or search on Google..." />;
 };
 export default Input;
