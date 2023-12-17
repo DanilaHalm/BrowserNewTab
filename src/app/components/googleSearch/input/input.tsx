@@ -31,14 +31,13 @@ const StyledInput = styled.input`
     &::placeholder {
       opacity: 0.7;
     }
-
-    &:autofill {
-      color: white;
-    }
   }
 
   &:autofill {
-    color: white
+    color: white;
+  }
+  &:-webkit-autofill {
+    color:white;
   }
   
   &::placeholder {
