@@ -47,7 +47,15 @@ const StyledInput = styled.input`
   }
   &:-webkit-autofill {
     color:white;
-    -webkit-text-fill-color: white
+    -webkit-text-fill-color: white;
+
+    &:focus {
+      -webkit-text-fill-color: white;
+    }
+
+    &:hover {
+      -webkit-text-fill-color: white;
+    }
   }
   
   &::placeholder {
