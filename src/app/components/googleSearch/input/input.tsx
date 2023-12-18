@@ -55,6 +55,12 @@ const StyledInput = styled.input<{ $pending?: boolean; }>`
     css`
       ${blink} 1s linear infinite
     `};
+
+  &:hover {
+    background: #2d4754;
+    box-shadow: inset 5px 5px 10px #142026,
+                inset -5px -5px 10px #466e82;
+  }
   
   &:focus {
     outline: none;
