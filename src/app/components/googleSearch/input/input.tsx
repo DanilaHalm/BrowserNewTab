@@ -31,7 +31,7 @@ const blink = keyframes`
     opacity: 0.5;
   }
   50% {
-    opacity: 0;
+    opacity: 0.1;
   }
   75% {
     opacity: 0.5;
