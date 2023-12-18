@@ -85,10 +85,6 @@ const StyledInput = styled.input<{ $pending?: boolean; }>`
     color: white;
     font-size: 0.8rem;
 
-    &::after {
-      animation: ${glow} 1s linear infinite 
-    }
-
     
     &::placeholder {
       opacity: 0.7;
