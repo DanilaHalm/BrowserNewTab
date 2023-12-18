@@ -48,7 +48,8 @@ const StyledInput = styled.input<{ $pending?: boolean; }>`
   border: none;
   border-radius: 8px;
   background: linear-gradient(145deg, #304c5a, #29404c);
-  box-shadow: 5px 5px 10px #263c47, -5px -5px 10px #345261;
+  box-shadow: 5px 5px 10px #142026,
+             -5px -5px 10px #466e82;
   animation: ${props => 
     props.$pending && 
     css`
@@ -58,7 +59,8 @@ const StyledInput = styled.input<{ $pending?: boolean; }>`
   &:focus {
     outline: none;
     background: #2d4754;
-    box-shadow: inset 5px 5px 10px #263c47, inset -5px -5px 10px #345261;
+    box-shadow: inset 5px 5px 10px #142026,
+                inset -5px -5px 10px #466e82;
     color: white;
     font-size: 0.8rem;
     
