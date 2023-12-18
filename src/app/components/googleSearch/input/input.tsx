@@ -38,6 +38,13 @@ const blink = keyframes`
   }
 `
 
+const glow = keyframes`
+  50% {
+    opacity: 1;
+    transform: scale(1.1); 
+  }
+`
+
 const StyledInput = styled.input<{ $pending?: boolean; }>`
   width: clamp(300px, 90vw, 800px);
   height: 3rem;
@@ -57,9 +64,17 @@ const StyledInput = styled.input<{ $pending?: boolean; }>`
     `};
 
   &:hover {
-    background: #2d4754;
-    box-shadow: inset 5px 5px 10px #142026,
-                inset -5px -5px 10px #466e82;
+    &::after {
+      animation: ${glow} 1s linear infinite 
+    }
+  }
+  
+  &::after {
+    opacity: 0;
+    box-shadow: 5px 5px 10px #142026,
+               -5px 5px 10px #142026,
+               -5px -5px 10px #142026,
+                5px -5px 10px #142026;
   }
   
   &:focus {
