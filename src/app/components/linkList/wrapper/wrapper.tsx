@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { PropsWithChildren } from 'react'
 
 const StyledWrapper = styled.div`
+  margin: 0 auto;
   display: grid;
   gap: 15px;
   grid-template-columns: repeat(3,1fr);
@@ -12,8 +13,6 @@ const StyledWrapper = styled.div`
   transition: 0.5s;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(145deg, #304c5a, #29404c);
-  box-shadow: 5px 5px 10px #142026, -5px -5px 10px #466e82;
 `
 
 const Wrapper = ({children} : PropsWithChildren) => {
