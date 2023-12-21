@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { PropsWithChildren } from 'react'
 
 const StyledWrapper = styled.div`
-  margin: 0 auto;
+  margin: 30px auto;
+  padding: 0;
   display: grid;
   gap: 15px;
   grid-template-columns: repeat(3,1fr);
