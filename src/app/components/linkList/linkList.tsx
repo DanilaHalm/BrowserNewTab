@@ -26,12 +26,12 @@ const links = [
 
 const LinkList = () => {
   return (
-    <>
+    <Wrapper>
       { links?.map(link => {
     return <LinkItem href={link?.href} name={link?.name}/>
     })
       }
-    </>
+    </Wrapper>
   )
 }
 
