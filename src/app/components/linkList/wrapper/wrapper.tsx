@@ -12,7 +12,7 @@ const StyledWrapper = styled.div`
   color: white;
   font-size: 1rem;
   transition: 0.5s;
-  border: none;
+  border: 1px white solid;
   border-radius: 8px;
 `
 
