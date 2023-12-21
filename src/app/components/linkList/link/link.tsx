@@ -7,16 +7,16 @@ interface ILinkItem {
   name: string
 }
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   background: red;
 `
 
 const LinkItem = ({href,name}:ILinkItem) => {
   
   
-  return (<Link prefetch href={href} passHref>
-           <StyledLink>{name}</StyledLink>
-         </Link>)
+  return (
+           <StyledLink prefetch href={href}>{name}</StyledLink>
+         )
 }
 
 export default LinkItem
