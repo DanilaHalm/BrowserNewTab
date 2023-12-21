@@ -8,8 +8,12 @@ interface ILinkItem {
 }
 
 const StyledLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   font-size: 1rem;
+  height: 3rem;
   transition: 0.5s;
   border: none;
   border-radius: 8px;
