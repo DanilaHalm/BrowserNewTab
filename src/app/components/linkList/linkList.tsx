@@ -28,7 +28,7 @@ const LinkList = () => {
   return (
     <>
       { links?.map(link => {
-    <LinkItem href={link?.href} name={link?.name}/>
+    return <LinkItem href={link?.href} name={link?.name}/>
     })
       }
     </>
