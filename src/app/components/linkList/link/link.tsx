@@ -1,17 +1,17 @@
 "use client"
 import styled from "styled-components";
-import Link as NextLink from "next/link";
+import Link from "next/link";
 
 const StyledLink = styled.a`
   background: red;
 `
 
-const Link = () => {
+const LinkItem = () => {
   
   
-  return (<NextLink prefetch href="#" passHref>
+  return (<Link prefetch href="#" passHref>
            <StyledLink>asdfg</StyledLink>
-         </NextLink>)
+         </Link>)
 }
 
-export default Link
+export default LinkItem
