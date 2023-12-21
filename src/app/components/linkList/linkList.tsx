@@ -27,9 +27,10 @@ const links = [
 const LinkList = () => {
   return (
     <>
-    links?.map(link => {
+      { links?.map(link => {
     <LinkItem href={link?.href} name={link?.name}/>
-  })
+    })
+      }
     </>
   )
 }
