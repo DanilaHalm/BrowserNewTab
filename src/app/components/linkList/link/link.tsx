@@ -8,7 +8,13 @@ interface ILinkItem {
 }
 
 const StyledLink = styled(Link)`
-  background: red;
+  color: white;
+  font-size: 1rem;
+  transition: 0.5s;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #304c5a, #29404c);
+  box-shadow: 5px 5px 10px #142026, -5px -5px 10px #466e82;
 `
 
 const LinkItem = ({href,name}:ILinkItem) => {
