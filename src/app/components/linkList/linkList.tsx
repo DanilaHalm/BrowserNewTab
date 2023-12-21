@@ -25,9 +25,13 @@ const links = [
 ]
 
 const LinkList = () => {
-  return links?.map(link => {
+  return (
+    <>
+    links?.map(link => {
     <LinkItem href={link?.href} name={link?.name}/>
   })
+    </>
+  )
 }
 
 export default LinkList
