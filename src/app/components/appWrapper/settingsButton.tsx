@@ -20,10 +20,12 @@ const StyledButton = styled.button`
 `
 
 const SettingsButton = ({ isActive, setIsActive } : ISettingsButton) => {
-  
+  const handleSettings = () => {
+    setIsActive(!isActive)
+  }
   
   return (
-    <StyledButton>{"Ss"}</StyledButton>
+    <StyledButton onClick={handleSettings} >{"Ss"}</StyledButton>
   )
 }
 
