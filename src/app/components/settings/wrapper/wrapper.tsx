@@ -6,10 +6,10 @@ interface IWrapper extends PropsWithChildren {
   isActive: boolean
 }
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.div<{ $isActive: boolean; }>`
   width: clamp(300px, 100vw, 800px);
   height: 100vh;
-  right: -100vw;
+  right: ${props => props.$isActive ? 0 : -100vw};
   position: absolute;
   z-index: 5;
   background: red;
@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
 
 const Wrapper = ({ isActive, children } : IWrapper) => {
   return (
-    <StyledWrapper>
+    <StyledWrapper $isActive>
       {children}
     </StyledWrapper>
   )
