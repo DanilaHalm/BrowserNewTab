@@ -7,7 +7,7 @@ const StyledButton = styled.button`
   height: 3rem;
   border: none;
   border-radius: 8px;
-  justify-self: end;
+  margin-left: auto;
   display: flex;
   justify-content: center;
   align-items: center;
