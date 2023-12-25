@@ -9,6 +9,7 @@ const StyledWrapper = styled.div`
   padding: 0;
   height: 100vh;
   transition: 0.5s;
+  position: relative;
 `
 
 const AppWrapper = ({children} : PropsWithChildren) => {
