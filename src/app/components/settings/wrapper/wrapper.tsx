@@ -6,7 +6,7 @@ interface IWrapper extends PropsWithChildren {
   isActive: boolean
 }
 
-const StyledWrapper = styled.div<{ $isActive?: boolean }>`
+const StyledWrapper = styled.div<{ $isActive: boolean }>`
   width: clamp(300px, 100vw, 800px);
   height: 100vh;
   right: ${props => props.$isActive ? 0 : -100vw};
