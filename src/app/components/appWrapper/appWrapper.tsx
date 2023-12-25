@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
 const AppWrapper = ({children} : PropsWithChildren) => {
   return (
     <StyledWrapper>
-      <SettingButton />
+      <SettingsButton />
       {children}
     </StyledWrapper>
   )
