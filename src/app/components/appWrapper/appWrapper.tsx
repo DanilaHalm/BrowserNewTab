@@ -1,7 +1,8 @@
 "use client"
 import styled from "styled-components";
 import { PropsWithChildren } from 'react';
-import SettingsButton from "./settingsButton"
+//import SettingsButton from "./settingsButton"
+import Settings from "../settings/settings";
 
 const StyledWrapper = styled.div`
   margin: 0;
@@ -13,7 +14,7 @@ const StyledWrapper = styled.div`
 const AppWrapper = ({children} : PropsWithChildren) => {
   return (
     <StyledWrapper>
-      <SettingsButton />
+      <Settings />
       {children}
     </StyledWrapper>
   )
