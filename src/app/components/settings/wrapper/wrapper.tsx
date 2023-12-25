@@ -9,7 +9,7 @@ interface IWrapper extends PropsWithChildren {
 const StyledWrapper = styled.div<{ $isActive: boolean }>`
   width: clamp(300px, 100vw, 800px);
   height: 100vh;
-  right: ${props => props.$isActive ? 0 : -100vw};
+  right: ${props => props.$isActive ? "0" : "-100vw"};
   position: absolute;
   z-index: 5;
   background: red;
