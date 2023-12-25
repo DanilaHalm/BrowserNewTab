@@ -13,6 +13,7 @@ const StyledWrapper = styled.div<{ $isActive: boolean }>`
   position: absolute;
   z-index: 5;
   background: red;
+  transition: 0.5s;
 `
 
 const Wrapper = ({ isActive, children } : IWrapper) => {
