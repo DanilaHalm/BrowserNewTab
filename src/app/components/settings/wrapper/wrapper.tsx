@@ -5,6 +5,7 @@ import { PropsWithChildren } from 'react';
 const StyledWrapper = styled.div`
   width: clamp(300px, 100vw, 800px);
   height: 100vh;
+  right: 50vw;
   position: absolute;
   z-index: 5;
   background: red;
