@@ -8,7 +8,7 @@ const Settings = () => {
   
   return (
     <>
-      <SettingsButton setIsActive={setIsActive}/>
+      <SettingsButton isActive={isActive} setIsActive={setIsActive}/>
       <Wrapper isActive={isActive}>
       </Wrapper>
     </>
