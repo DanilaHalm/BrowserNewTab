@@ -17,7 +17,7 @@ const StyledWrapper = styled.div<{ $isActive: boolean }>`
 
 const Wrapper = ({ isActive, children } : IWrapper) => {
   return (
-    <StyledWrapper $isActive>
+    <StyledWrapper $isActive={isActive}>
       {children}
     </StyledWrapper>
   )
