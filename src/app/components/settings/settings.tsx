@@ -6,8 +6,7 @@ const Settings = () => {
   return (
     <>
       <SettingsButton />
-      <Wrapper>
-      </Wrapper>
+      
     </>
   )
 }
