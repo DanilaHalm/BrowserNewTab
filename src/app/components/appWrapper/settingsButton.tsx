@@ -9,10 +9,10 @@ const StyledButton = styled.button`
   border-radius: 8px;
 `
 
-const SettingButton = () => {
+const SettingsButton = () => {
   return (
     <StyledButton>{"Ss"}</StyledButton>
   )
 }
 
-export default SettingButton
+export default SettingsButton
