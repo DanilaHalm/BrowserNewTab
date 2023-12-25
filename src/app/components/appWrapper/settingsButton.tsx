@@ -1,5 +1,5 @@
 "use client"
-
+import { Dispatch } from "react"
 import styled from "styled-components";
 interface ISettingsButton {
   setIsActive: Dispatch<SetStateAction<boolean>>
