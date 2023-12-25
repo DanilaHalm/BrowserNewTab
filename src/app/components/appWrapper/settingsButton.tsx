@@ -19,7 +19,9 @@ const StyledButton = styled.button`
   align-items: center;
 `
 
-const SettingsButton = ({setIsActive} : ISettingsButton) => {
+const SettingsButton = ({ isActive, setIsActive } : ISettingsButton) => {
+  
+  
   return (
     <StyledButton>{"Ss"}</StyledButton>
   )
