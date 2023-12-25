@@ -2,6 +2,10 @@
 import styled from "styled-components";
 import { PropsWithChildren } from 'react';
 
+interface IWrapper extends PropsWithChildren {
+  isActive: boolean
+}
+
 const StyledWrapper = styled.div`
   width: clamp(300px, 100vw, 800px);
   height: 100vh;
@@ -11,7 +15,7 @@ const StyledWrapper = styled.div`
   background: red;
 `
 
-const Wrapper = ({children} : PropsWithChildren) => {
+const Wrapper = ({ isActive, children } : IWrapper) => {
   return (
     <StyledWrapper>
       {children}
