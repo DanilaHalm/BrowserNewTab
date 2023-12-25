@@ -1,6 +1,9 @@
 "use client"
 
 import styled from "styled-components";
+interface ISettingsButton {
+  setIsActive: Dispatch<SetStateAction<boolean>>
+}
 
 const StyledButton = styled.button`
   width: 3rem;
@@ -14,7 +17,7 @@ const StyledButton = styled.button`
   align-items: center;
 `
 
-const SettingsButton = () => {
+const SettingsButton = ({setIsActive} : ISettingsButton) => {
   return (
     <StyledButton>{"Ss"}</StyledButton>
   )
