@@ -10,6 +10,7 @@ const StyledWrapper = styled.div`
   transition: 0.5s;
   position: relative;
   overflow: hidden;
+  background: ${props => props.theme.background};
 `
 
 const Wrapper = ({children} : PropsWithChildren) => {
