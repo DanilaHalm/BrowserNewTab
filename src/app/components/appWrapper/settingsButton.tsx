@@ -33,8 +33,8 @@ const SettingsButton = ({ isActive, setIsActive } : ISettingsButton) => {
   const [settingsImage,setSettingsImage] = useState(theme.settingsImage)
   
   const handleSettings = () => {
+    setSettingsImage(isActive ? theme.settingsImage : theme.settingsXmarkImage)
     setIsActive(!isActive)
-    setSettingsImage(isActive ? theme.settingsXmarkImage : theme.settingsImage)
   }
   
   return (
