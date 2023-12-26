@@ -14,7 +14,7 @@ const StyledButton = styled.button`
 `
 
 const ThemeSwitcherButton = ({theme: ITheme}) => {
-  return <StyledButton>{"Theme"}</StyledButton>
+  return <StyledButton theme={theme}>{"Theme"}</StyledButton>
 }
 
 export default ThemeSwitcherButton
