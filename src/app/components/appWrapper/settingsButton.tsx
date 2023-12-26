@@ -1,6 +1,8 @@
 "use client"
+import Image from "next/image"
 import { Dispatch, SetStateAction } from "react"
 import styled from "styled-components";
+import { useTheme } from "styled-components";
 
 interface ISettingsButton {
   isActive: boolean,
@@ -25,13 +27,26 @@ const StyledButton = styled.button`
   }
 `
 
+const StyledImage = styled(Image)`
+  
+`
+
 const SettingsButton = ({ isActive, setIsActive } : ISettingsButton) => {
+  const theme = useTheme()
+  
   const handleSettings = () => {
     setIsActive(!isActive)
   }
   
   return (
-    <StyledButton onClick={handleSettings} >{"Ss"}</StyledButton>
+    <StyledButton onClick={handleSettings} >
+      <Image 
+        src={theme.settingsImage}
+        width={50}
+        height={50}
+        alt="Settings"
+        />
+    </StyledButton>
   )
 }
 
