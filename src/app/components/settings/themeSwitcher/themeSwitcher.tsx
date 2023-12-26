@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ThemeSwitcherButton from "../themeSwitcherButton/themeSwitcherButton";
+import darkTheme from "../../../themes/darkTheme";
 
 const StyledThemeSwitcher = styled.div`
   margin: 1rem auto;
@@ -16,7 +17,7 @@ const StyledThemeSwitcher = styled.div`
 const ThemeSwitcher = () => {
   return (
     <StyledThemeSwitcher>
-      <ThemeSwitcherButton />
+      <ThemeSwitcherButton theme={darkTheme}/>
     </StyledThemeSwitcher>
     )
 }
