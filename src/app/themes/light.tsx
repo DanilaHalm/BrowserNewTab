@@ -2,18 +2,18 @@ import ITheme from "./interface";
 
 const lightTheme: ITheme = {
   name: "Light",
-  color: "white",
-  background: "linear-gradient(145deg, #111829, #0e1422)",
-  boxshadow:  "5px 5px 10px #06090f, -5px -5px 10px #1a233d",
+  color: "#101626",
+  background: "linear-gradient(145deg, #ebe2f0, #c6beca)",
+  boxshadow:  "5px 5px 10px #58545a, -5px -5px 10px #ffffff",
   focus: {
-    background: "#101626",
-    boxshadow: "inset 5px 5px 10px #06090f, inset -5px -5px 10px #1a233d"
+    background: "#dcd3e0",
+    boxshadow: "inset 5px 5px 10px #58545a, inset -5px -5px 10px #ffffff"
   },
   hover: {
     boxshadow: "2px 2px 5px #7296a8, -2px 2px 5px #7296a8, -2px -2px 5px #7296a8, 2px -2px 5px #7296a8"
   },
-  settingsImage: "/settings-white.png",
-  settingsXmarkImage: "/xmark-white.png"
+  settingsImage: "/settings-black.png",
+  settingsXmarkImage: "/xmark-black.png"
 }
 
 export default lightTheme
