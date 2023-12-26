@@ -19,14 +19,14 @@ const StyledInput = styled.input<{ $pending?: boolean }>`
   width: clamp(300px, 90vw, 800px);
   height: 3rem;
   padding: 0 0 0 10px;
-  color: white;
+  color: ${props => props.theme.color};
   font-size: 1rem;
   transition: 0.5s;
   border: none;
   border-radius: 8px;
   z-index: 1;
-  background: linear-gradient(145deg, #304c5a, #29404c);
-  box-shadow: 5px 5px 10px #142026, -5px -5px 10px #466e82;
+  background: ${props => props.theme.background};
+  box-shadow: ${props => props.theme.boxshadow};
   animation: ${(props) =>
     props.$pending &&
     css`
@@ -34,13 +34,13 @@ const StyledInput = styled.input<{ $pending?: boolean }>`
     `};
 
   &:hover {
-    box-shadow: 2px 2px 5px #7296a8, -2px 2px 5px #7296a8, -2px -2px 5px #7296a8, 2px -2px 5px #7296a8;
+    box-shadow: ${props => props.theme.hover.boxshadow};
   }
 
   &:focus {
     outline: none;
-    background: #2d4754;
-    box-shadow: inset 5px 5px 10px #142026, inset -5px -5px 10px #466e82;
+    background: ${props => props.theme.focus.background};
+    box-shadow: ${props => props.theme.focus.boxshadow};
     color: white;
     font-size: 0.8rem;
 
