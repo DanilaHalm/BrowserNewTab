@@ -25,7 +25,7 @@ const darkTheme: IDark = {
   hover: {
     boxshadow: "2px 2px 5px #7296a8, -2px 2px 5px #7296a8, -2px -2px 5px #7296a8, 2px -2px 5px #7296a8"
   },
-  settingsImage: "/settings-white"
+  settingsImage: "/settings-white.png"
 }
 
 export default darkTheme
