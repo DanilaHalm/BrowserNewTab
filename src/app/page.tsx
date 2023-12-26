@@ -1,15 +1,11 @@
-"use client"
-import GoogleSearch from "./components/googleSearch/googleSearch";
-import LinkList from "./components/linkList/linkList";
 import AppWrapper from "./components/appWrapper/appWrapper";
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
-      <AppWrapper>
-        <GoogleSearch />
-        <LinkList />
-      </AppWrapper>
+      <AppWrapper />
     </main>
   );
 }
+
+export default Home
