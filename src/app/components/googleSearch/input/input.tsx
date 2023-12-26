@@ -50,7 +50,7 @@ const StyledInput = styled.input<{ $pending?: boolean }>`
   }
 
   &::placeholder {
-    color: white;
+    color: ${props => props.theme.color};
   }
 
   &::-webkit-search-cancel-button {
