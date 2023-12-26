@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ITheme from "../../../themes/interface";
-  
+import { useState } from "react";
+
 const StyledButton = styled.button`
   width: 8rem;
   height: 3rem;
