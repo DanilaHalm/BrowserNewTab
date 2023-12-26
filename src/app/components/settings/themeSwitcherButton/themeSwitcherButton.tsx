@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ITheme from "../../../themes/interface";
-import { useState } from "react";
 
 const StyledButton = styled.button`
   width: 8rem;
@@ -14,7 +13,7 @@ const StyledButton = styled.button`
   align-items: center;
 `
 
-const ThemeSwitcherButton = ({theme: ITheme}) => {
+const ThemeSwitcherButton = ({theme}: ITheme) => {
   return <StyledButton>{"Theme"}</StyledButton>
 }
 
