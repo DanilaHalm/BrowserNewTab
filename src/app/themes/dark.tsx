@@ -2,7 +2,7 @@ import ITheme from "./interface";
 
 const darkTheme: ITheme = {
   name: "Dark",
-  color: "white",
+  color: "#dcd3e0",
   background: "linear-gradient(145deg, #111829, #0e1422)",
   boxshadow:  "5px 5px 10px #06090f, -5px -5px 10px #1a233d",
   focus: {
