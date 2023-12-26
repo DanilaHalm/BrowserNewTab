@@ -1,14 +1,14 @@
 interface IDark {
-  name: "string",
-  color: "string",
-  background: "string",
-  boxshadow: "string",
+  name: string,
+  color: string,
+  background: string,
+  boxshadow: string,
   focus: {
-    background: "string",
-    boxshadow: "string",
+    background: string,
+    boxshadow: string,
   },
   hover: {
-    boxshadow: "string"
+    boxshadow: string
   }
 }
 
