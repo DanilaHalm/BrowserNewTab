@@ -1,25 +1,15 @@
 "use client"
-import styled from "styled-components";
-import { PropsWithChildren } from 'react';
-//import SettingsButton from "./settingsButton"
-import Settings from "../settings/settings";
+import GoogleSearch from "../googleSearch/googleSearch";
+import LinkList from "../linkList/linkList";
+import Wrapper from "./wrapper/wrapper";
 
-const StyledWrapper = styled.div`
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  transition: 0.5s;
-  position: relative;
-  overflow: hidden;
-`
-
-const AppWrapper = ({children} : PropsWithChildren) => {
+const AppWrapper = () => {
   return (
-    <StyledWrapper>
-      <Settings />
-      {children}
-    </StyledWrapper>
-  )
+      <Wrapper>
+        <GoogleSearch />
+        <LinkList />
+      </Wrapper>
+  );
 }
 
 export default AppWrapper
