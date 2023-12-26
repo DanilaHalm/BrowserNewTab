@@ -7,9 +7,9 @@ const StyledWrapper = styled.div`
   padding: 0;
   display: grid;
   gap: 15px;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
   width: clamp(300px, 90vw, 800px);
-  color: white;
+  color: ${props => props.theme.color};
   font-size: 1rem;
   transition: 0.5s;
   border-radius: 8px;
