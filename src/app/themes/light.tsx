@@ -4,10 +4,10 @@ const lightTheme: ITheme = {
   name: "Light",
   color: "#101626",
   background: "linear-gradient(145deg, #ebe2f0, #c6beca)",
-  boxshadow:  "5px 5px 10px #c6beca, -5px -5px 10px #f2e8f6",
+  boxshadow:  "5px 5px 10px #b0a9b3, -5px -5px 10px #fffdff",
   focus: {
     background: "#dcd3e0",
-    boxshadow: "inset 5px 5px 10px #c6beca, inset -5px -5px 10px #f2e8f6"
+    boxshadow: "inset 5px 5px 10px #b0a9b3, inset -5px -5px 10px #fffdff"
   },
   hover: {
     boxshadow: "2px 2px 5px #7296a8, -2px 2px 5px #7296a8, -2px -2px 5px #7296a8, 2px -2px 5px #7296a8"
