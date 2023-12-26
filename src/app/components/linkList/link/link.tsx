@@ -19,11 +19,11 @@ const StyledLink = styled(Link)`
   transition: 0.5s;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(145deg, #304c5a, #29404c);
-  box-shadow: 5px 5px 10px #142026, -5px -5px 10px #466e82;
+  background: ${props => props.theme.background};
+  box-shadow: ${props => props.theme.boxshadow};
 
   &:hover {
-    box-shadow: 2px 2px 5px #7296a8, -2px 2px 5px #7296a8, -2px -2px 5px #7296a8, 2px -2px 5px #7296a8;
+    box-shadow: ${props => props.theme.hover.boxshadow};
   }
 `
 
