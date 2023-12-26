@@ -41,7 +41,7 @@ const SettingsButton = ({ isActive, setIsActive } : ISettingsButton) => {
   return (
     <StyledButton onClick={handleSettings} >
       <Image 
-        src={theme.settingsImage}
+        src={ isActive ? theme.settingsXmarkImage : theme.settingsImage}
         width={30}
         height={30}
         alt="Settings"
