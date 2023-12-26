@@ -10,7 +10,8 @@ interface IDark {
   hover: {
     boxshadow: string
   }
-  settingsImage: string
+  settingsImage: string,
+  settingsXmarkImage: string
 }
 
 const darkTheme: IDark = {
@@ -25,7 +26,8 @@ const darkTheme: IDark = {
   hover: {
     boxshadow: "2px 2px 5px #7296a8, -2px 2px 5px #7296a8, -2px -2px 5px #7296a8, 2px -2px 5px #7296a8"
   },
-  settingsImage: "/settings-white.png"
+  settingsImage: "/settings-white.png",
+  settingsXmarkImage: "/xmark-white.png"
 }
 
 export default darkTheme
