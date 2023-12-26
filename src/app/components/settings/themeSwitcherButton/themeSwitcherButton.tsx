@@ -13,7 +13,7 @@ const StyledButton = styled.button`
   align-items: center;
 `
 
-const ThemeSwitcherButton = (theme: ITheme}) => {
+const ThemeSwitcherButton = (theme: ITheme) => {
   return <StyledButton theme={theme}>{"Theme"}</StyledButton>
 }
 
