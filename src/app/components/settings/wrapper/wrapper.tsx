@@ -11,9 +11,11 @@ const StyledWrapper = styled.div<{ $isActive: boolean }>`
   height: 100vh;
   right: ${props => props.$isActive ? "0" : "-100vw"};
   position: absolute;
+  border-radius: 8px;
   z-index: 5;
-  background: red;
+  background: ${props => props.theme.background};
   transition: 0.5s;
+  color: ${props => props.theme.color};
 `
 
 const Wrapper = ({ isActive, children } : IWrapper) => {
