@@ -10,6 +10,7 @@ const StyledThemeSwitcher = styled.div`
   border-radius: 8px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 `
 
 const ThemeSwitcher = () => {
