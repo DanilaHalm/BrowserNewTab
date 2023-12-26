@@ -12,11 +12,16 @@ const StyledButton = styled.button`
   height: 3rem;
   border: none;
   border-radius: 8px;
-  margin-left: auto;
-  margin-bottom: 1rem;
+  margin: 1rem 1rem 1rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: ${props => props.theme.background};
+  box-shadow: ${props => props.theme.boxshadow};
+
+  &hover {
+    box-shadow: ${props => props.theme.hover.boxshadow};
+  }
 `
 
 const SettingsButton = ({ isActive, setIsActive } : ISettingsButton) => {
