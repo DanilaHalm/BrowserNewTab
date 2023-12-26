@@ -42,10 +42,11 @@ const StyledInput = styled.input<{ $pending?: boolean }>`
     background: ${props => props.theme.focus.background};
     box-shadow: ${props => props.theme.focus.boxshadow};
     color: ${props => props.theme.color};
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 
     &::placeholder {
       opacity: 0.7;
+      font-size: 0.8rem;
     }
   }
 
