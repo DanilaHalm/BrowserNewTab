@@ -16,6 +16,7 @@ const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: ${props => props.theme.color};
   background: ${props => props.theme.background};
   box-shadow: ${props => props.theme.boxshadow};
 
