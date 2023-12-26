@@ -12,7 +12,7 @@ const StyledLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: ${props => props.theme.color};
   text-decoration: none;
   font-size: 1rem;
   height: 3rem;
