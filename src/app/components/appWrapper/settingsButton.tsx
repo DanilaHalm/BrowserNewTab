@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction, useState} from "react"
 import styled from "styled-components";
 import { useTheme } from "styled-components";
 
@@ -27,21 +27,20 @@ const StyledButton = styled.button`
   }
 `
 
-const StyledImage = styled(Image)`
-  
-`
-
 const SettingsButton = ({ isActive, setIsActive } : ISettingsButton) => {
   const theme = useTheme()
+
+  const [settingsImage,setSettingsImage] = useState(theme.settingsImage)
   
   const handleSettings = () => {
+    setSettingsImage(isActive ? theme.settingsXmarkImage : theme.settingsImage)
     setIsActive(!isActive)
   }
   
   return (
     <StyledButton onClick={handleSettings} >
       <Image 
-        src={ isActive ? theme.settingsXmarkImage : theme.settingsImage}
+        src={settingsImage}
         width={30}
         height={30}
         alt="Settings"
