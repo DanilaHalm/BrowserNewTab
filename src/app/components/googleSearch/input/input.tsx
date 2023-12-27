@@ -19,14 +19,14 @@ const StyledInput = styled.input<{ $pending?: boolean }>`
   width: clamp(300px, 90vw, 800px);
   height: 3rem;
   padding: 0 0 0 10px;
-  color: ${props => props.theme.color};
+  color: ${(props) => props.theme.color};
   font-size: 1rem;
-  transition: 0.5s;
+  transition: all 0.5s;
   border: none;
   border-radius: 8px;
   z-index: 1;
-  background: ${props => props.theme.background};
-  box-shadow: ${props => props.theme.boxshadow};
+  background: ${(props) => props.theme.background};
+  box-shadow: ${(props) => props.theme.boxshadow};
   animation: ${(props) =>
     props.$pending &&
     css`
@@ -34,15 +34,14 @@ const StyledInput = styled.input<{ $pending?: boolean }>`
     `};
 
   &:hover {
-    box-shadow: ${props => props.theme.hover.boxshadow};
+    box-shadow: ${(props) => props.theme.hover.boxshadow};
   }
 
   &:focus {
     outline: none;
-    background: ${props => props.theme.focus.background};
-    box-shadow: ${props => props.theme.focus.boxshadow};
-    color: ${props => props.theme.color};
-    font-size: 1.1rem;
+    background: ${(props) => props.theme.focus.background};
+    box-shadow: ${(props) => props.theme.focus.boxshadow};
+    color: ${(props) => props.theme.color};
 
     &::placeholder {
       opacity: 0.7;
@@ -51,7 +50,8 @@ const StyledInput = styled.input<{ $pending?: boolean }>`
   }
 
   &::placeholder {
-    color: ${props => props.theme.color};
+    color: ${(props) => props.theme.color};
+    transition: 0.5s;
   }
 
   &::-webkit-search-cancel-button {

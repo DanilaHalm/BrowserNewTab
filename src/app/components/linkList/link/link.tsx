@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import styled from "styled-components";
 import Link from "next/link";
 
 interface ILinkItem {
-  href: string
-  name: string
+  href: string;
+  name: string;
 }
 
 const StyledLink = styled(Link)`
@@ -12,27 +12,32 @@ const StyledLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${props => props.theme.color};
+  color: ${(props) => props.theme.color};
   text-decoration: none;
   font-size: 1rem;
   height: 3rem;
   transition: 0.5s;
   border: none;
   border-radius: 8px;
-  background: ${props => props.theme.background};
-  box-shadow: ${props => props.theme.boxshadow};
+  background: ${(props) => props.theme.background};
+  box-shadow: ${(props) => props.theme.boxshadow};
 
   &:hover {
-    box-shadow: ${props => props.theme.hover.boxshadow};
+    box-shadow: ${(props) => props.theme.hover.boxshadow};
   }
-`
 
-const LinkItem = ({href,name}:ILinkItem) => {
-  
-  
+  &:active {
+    background: ${(props) => props.theme.focus.background};
+    box-shadow: ${(props) => props.theme.focus.boxshadow};
+  }
+`;
+
+const LinkItem = ({ href, name }: ILinkItem) => {
   return (
-           <StyledLink prefetch href={href}>{name}</StyledLink>
-         )
-}
+    <StyledLink prefetch href={href}>
+      {name}
+    </StyledLink>
+  );
+};
 
-export default LinkItem
+export default LinkItem;

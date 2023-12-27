@@ -4,35 +4,34 @@ import LinkItem from "./link/link";
 const links = [
   {
     href: "https://github.com",
-    name: "GitHub"
+    name: "GitHub",
   },
-    {
+  {
     href: "https://youtube.com",
-    name: "YouTube"
+    name: "YouTube",
   },
-    {
+  {
     href: "https://vk.ru",
-    name: "Vkontakte"
+    name: "Vkontakte",
   },
-    {
+  {
     href: "https://vercel.com",
-    name: "Vercel"
+    name: "Vercel",
   },
-    {
+  {
     href: "https://nextjs.org",
-    name: "NextJS"
+    name: "NextJS",
   },
-]
+];
 
 const LinkList = () => {
   return (
     <Wrapper>
-      { links?.map(link => {
-    return <LinkItem href={link?.href} name={link?.name}/>
-    })
-      }
+      {links?.map((link) => {
+        return <LinkItem key={link?.href} href={link?.href} name={link?.name} />;
+      })}
     </Wrapper>
-  )
-}
+  );
+};
 
-export default LinkList
+export default LinkList;
