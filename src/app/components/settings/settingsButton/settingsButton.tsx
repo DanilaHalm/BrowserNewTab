@@ -38,12 +38,12 @@ const SettingsButton = ({ isActive, setIsActive }: ISettingsButton) => {
   const [settingsImage, setSettingsImage] = useState(currentTheme.settingsImage);
 
   useEffect(() => {
-    setSettingsImage(isActive ? currentTheme.settingsImage : currentTheme.settingsXmarkImage);
+    setSettingsImage(isActive ? currentTheme.settingsXmarkImage : currentTheme.settingsImage);
   }, [currentTheme]);
 
   const handleSettings = () => {
     setIsActive(!isActive);
-    setSettingsImage(isActive ? currentTheme.settingsImage : currentTheme.settingsXmarkImage);
+   // setSettingsImage(isActive ? currentTheme.settingsImage : currentTheme.settingsXmarkImage);
   };
 
   return (
