@@ -3,7 +3,7 @@ import ThemeSwitcherButton from "../themeSwitcherButton/themeSwitcherButton";
 import darkTheme from "../../../themes/dark";
 import lightTheme from "@/app/themes/light";
 
-const StyledThemeSwitcher = styled.div`
+const StyledThemeSwitcher = styled.fieldset`
   margin: 1rem auto;
   width: 90%;
   height: 5rem;
@@ -18,11 +18,11 @@ const StyledThemeSwitcher = styled.div`
 const ThemeSwitcher = () => {
   return (
     <StyledThemeSwitcher>
-      <fieldset>
+      
         <legend>{"Theme"}</legend>
       <ThemeSwitcherButton theme={darkTheme} />
       <ThemeSwitcherButton theme={lightTheme} />
-      </fieldset>
+      
     </StyledThemeSwitcher>
   );
 };
