@@ -39,7 +39,7 @@ const SettingsButton = ({ isActive, setIsActive }: ISettingsButton) => {
 
   useEffect(() => {
     setSettingsImage(isActive ? currentTheme.settingsXmarkImage : currentTheme.settingsImage);
-  }, [currentTheme]);
+  }, [currentTheme, isActive]);
 
   const handleSettings = () => {
     setIsActive(!isActive);
