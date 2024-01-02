@@ -30,7 +30,7 @@ const StyledButton = styled.button`
 `;
 
 const ThemeSwitcherButton: React.FC<IStyledButton> = ({ theme }: IStyledButton) => {
-  const [currentTheme, setCurrentTheme] = useContext(ThemeContext);
+  const [_, setCurrentTheme] = useContext(ThemeContext);
 
   const handleClick = () => {
     setCurrentTheme(theme);

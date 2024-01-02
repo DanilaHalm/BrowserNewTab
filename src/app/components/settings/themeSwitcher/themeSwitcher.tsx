@@ -18,11 +18,9 @@ const StyledThemeSwitcher = styled.fieldset`
 const ThemeSwitcher = () => {
   return (
     <StyledThemeSwitcher>
-      
-        <legend>{"Theme"}</legend>
+      <legend>{"Theme"}</legend>
       <ThemeSwitcherButton theme={darkTheme} />
       <ThemeSwitcherButton theme={lightTheme} />
-      
     </StyledThemeSwitcher>
   );
 };
