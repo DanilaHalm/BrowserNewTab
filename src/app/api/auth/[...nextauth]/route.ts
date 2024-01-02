@@ -14,7 +14,7 @@ export const authOptions = {
       return true
       }
     },
-  },
+  
 };
 export const handler = NextAuth(authOptions);
 
